@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-sm">
+    <h1>Fidjis</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-3">
+    <%= render 'form', fidji: @fidji || Fidji.new %>
+  </div>
+  <div class="col-sm-9">  
+    
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Family</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @fidjis.each do |fidji| %>
+          <tr>
+            <td><%= fidji.name %></td>
+            <td><%= fidji.family %></td>
+            <td><%= link_to 'Show', fidji %></td>
+            <td><%= link_to 'Edit', edit_fidji_path(fidji) %></td>
+            <td><%= link_to 'Destroy', fidji, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+    
+  </div>
+</div>

@@ -1,0 +1,61 @@
+<%= form_with(model: fidji, local: true) do |form| %>
+  <% if fidji.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fidji.errors.count, "error") %> prohibited this fidji from being saved:</h2>
+
+      <ul>
+      <% fidji.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :fidji_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :family %>
+    <%= form.text_field :family, id: :fidji_family %>
+  </div>
+
+  <div class="field">
+    <%= form.label :height %>
+    <%= form.text_field :height, id: :fidji_height %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :min_box, 'Minimum number of boxes needed' %>
+    <%= form.text_field :min_box, id: :fidji_min_box %>
+  </div>
+
+  <div class="field">
+    <%= form.label :max_units, 'Max cost units per box' %>
+    <%= form.text_field :max_units, id: :fidji_max_units %>
+  </div>
+
+  <div class="field">
+    <%= form.label :min_units, 'Max cost units per box' %>
+    <%= form.text_field :min_units, id: :fidji_min_units %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cost_units, 'cost in units' %>
+    <%= form.text_field :cost_units, id: :fidji_cost_units %>
+  </div>
+
+  <div class="field">
+    <%= form.label :friends, 'friends' %>
+    <%= form.text_field :friends, id: :fidji_friends %>
+  </div>
+  <div class="field">
+    <%= form.label :enemies, 'enemies' %>
+    <%= form.text_field :enemies, id: :fidji_enemies %>
+  </div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

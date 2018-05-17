@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-sm">
+    
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm">
+    <%= form_for('edit_property', url: item_properties_path(item_id: item.id), remote: true, html: {class: 'form-inline', id: "form_edit_property_#{fp.id}"}) do |f| %>
+      <div id="prout" class="form-group">
+        <%= render 'form_properties/options', fp: fp, item: item %>
+          
+        
+      </div>
+      <div class="form-group">
+        <%= f.submit 'edit', class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+  </div>
+  <div class="col-sm">
+    Add an option: 
+
+    <%= form_for(:form_property, url: form_property_path(fp), method: :put, remote: true, html: {class: 'form-inline', id: "form_create_property_#{fp.id}_option"}) do |f| %>
+        <%= f.text_field :option, id: "form_property_#{fp.id}", class: 'form-control mr-sm-2' %>
+        <%= f.submit 'add', class: 'btn btn-primary' %>
+    <% end %>
+
+  </div>
+</div>
+

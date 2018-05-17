@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pos x:</strong>
+  <%= @box.pos_x %>
+</p>
+
+<p>
+  <strong>Pos y:</strong>
+  <%= @box.pos_y %>
+</p>
+
+<p>
+  <strong>Plot:</strong>
+  <%= @box.plot %>
+</p>
+
+<%= link_to 'Edit', edit_garden_plot_box_path(id: @box.id) %> |
+<%= link_to 'Back', garden_plot_boxes_path(id: @box.id) %>

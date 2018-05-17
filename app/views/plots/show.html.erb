@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @plot.name %>
+</p>
+
+<p>
+  <strong>Length cm:</strong>
+  <%= @plot.length_cm %>
+</p>
+
+<p>
+  <strong>Width cm:</strong>
+  <%= @plot.width_cm %>
+</p>
+
+<p>
+  <strong>Garden:</strong>
+  <%= @plot.garden %>
+</p>
+
+<%= link_to 'Edit', edit_garden_plot_path(@plot) %> |
+<%= link_to 'Back', garden_plots_path %>
+
+<%= render template: 'boxes/index' %>

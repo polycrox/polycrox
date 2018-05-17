@@ -1,0 +1,8 @@
+<% if prop %>
+  <p>value is : <%= prop.value %><br />
+  <small class='last-update'>last update: <%= prop.created_at %></small><br />
+  <%= link_to 'reset', delete_item_properties_path(item_id: item.id, id: prop.id), remote: true, method: :delete, class: 'btn btn-primary btn-danger' %>
+  </p>
+<% else %>
+   ¯\_(ツ)_/¯
+<% end %>

@@ -1,0 +1,22 @@
+
+var form_errors = document.getElementsByClassName('form-property-errors')[0];
+
+var item_properties = document.getElementById('item_properties');
+
+<% if @fp.valid? %>
+  // reset the form
+  document.getElementById('form_property_form').reset();
+  // reset form errors div
+  form_errors.innerHTML = '';
+
+  // create a new row (card, item-property)
+  new_row = document.createElement('div')  
+  new_row.classList.add('row')
+  new_row.classList.add('mb-3')
+  new_row.innerHTML = '<%= escape_javascript render("properties/show", fp: @fp, item: @item) %>';
+
+  item_properties.insertBefore(new_row, item_properties.firstChild)
+<% else %>
+  
+  form_errors.innerHTML = '<%= escape_javascript render("form_properties/error", object: @fp) %>';  
+<% end %>

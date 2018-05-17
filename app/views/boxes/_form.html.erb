@@ -1,0 +1,32 @@
+<%= form_with(model: box, local: true, url: garden_plot_boxes_url()) do |form| %>
+  <% if box.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(box.errors.count, "error") %> prohibited this box from being saved:</h2>
+
+      <ul>
+      <% box.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :pos_x %>
+    <%= form.number_field :pos_x, id: :box_pos_x %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pos_y %>
+    <%= form.number_field :pos_y, id: :box_pos_y %>
+  </div>
+
+  <div class="field">
+    <%= form.label :plot_id %>
+    <%= form.text_field :plot_id, id: :box_plot_id, value: @plot.id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

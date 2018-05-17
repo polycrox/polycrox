@@ -1,0 +1,36 @@
+<div class="form-control">
+<h2>Create a FormProperty</h2>
+<%= form_for(:form_property, url: form_properties_url, method: :post, remote: true, html: {id: 'form_property_form'}) do |f| %>
+
+  <div class="form-property-errors"></div>
+  <div class="form-group">
+    <%= f.label :name, 'FormProperty name' %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description, 'FormProperty description' %>
+    <%= f.text_area :description, class: 'form-control' %>
+  </div>  
+
+  <div class="form-group">
+    <%= f.label :html, 'HTML Property' %>
+    <%= f.select :html, ['input', 'select'], {include_blank: false}, {class: 'form-control'} %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :options, 'Options (only for select HTML property)' %>
+    <%= f.text_field :options, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :multiple, 'Multiple (only for select HTML properties)' %>
+    <%= f.check_box :multiple, class: 'form-control' %> 
+  </div>
+
+  <div class="form-group">
+    <%= f.hidden_field :item_id, value: item.id %>
+    <%= f.submit 'Create', class: 'btn btn-primary' %>
+  </div>
+<% end %>
+</div>

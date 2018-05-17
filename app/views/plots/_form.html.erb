@@ -1,0 +1,37 @@
+<%= form_with(model: plot, local: true, url: garden_plots_url()) do |form| %>
+  <% if plot.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(plot.errors.count, "error") %> prohibited this plot from being saved:</h2>
+
+      <ul>
+      <% plot.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :plot_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :length_cm %>
+    <%= form.number_field :length_cm, id: :plot_length_cm %>
+  </div>
+
+  <div class="field">
+    <%= form.label :width_cm %>
+    <%= form.number_field :width_cm, id: :plot_width_cm %>
+  </div>
+
+  <div class="field">
+    <%= form.label :garden_id %>
+    <%= form.text_field :garden_id, id: :plot_garden_id, value: @garden.id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

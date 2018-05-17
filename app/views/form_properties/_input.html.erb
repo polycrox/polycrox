@@ -1,0 +1,17 @@
+<% value = nil %>
+<% if prop = item.hash_properties_objects[fp.name.to_sym] %>
+  <% value = prop.value %>  
+<% end %>
+
+
+<%= form_for('edit_property', url: item_properties_path(item_id: item.id), remote: true, html: {class: 'form-inline', id: "form_edit_property_#{fp.id}"}) do |f| %>
+  <div id="property_<%= fp.id %>_form_errors"></div>
+
+  <div class="form-group">
+    <input type='hidden' name='properties[<%= fp.id %>][name]' value='<%= fp.name %>' />
+    <input name='properties[<%= fp.id %>][value]' type='text' class='from-control' />
+  </div>
+  <div class="form-group ml-2">
+    <%= f.submit 'edit', class: 'btn btn-primary' %>
+  </div>
+<% end %>

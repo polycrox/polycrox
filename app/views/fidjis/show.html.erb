@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @fidji.name %>
+</p>
+
+<p>
+  <strong>Family:</strong>
+  <%= @fidji.family %>
+</p>
+
+<%= link_to 'Edit', edit_fidji_path(@fidji) %> |
+<%= link_to 'Back', fidjis_path %>

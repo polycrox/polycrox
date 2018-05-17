@@ -1,0 +1,5 @@
+<div class="alert alert-danger" role="alert">
+  <% object.errors.each do |field, message| %>
+    <p class="mb-0"><%= field.to_s %> <%= message %></p>
+  <% end %>
+</div>

@@ -1,0 +1,32 @@
+
+alert('toto');
+// var options_form_errors = document.getElementsByClassName('form-property-errors')[0];
+var property_form_errors = document.getElementById('property_' + <%= @form_prop_id %> + '_form_errors');
+
+<% if @prop.valid? %>
+  document.getElementById('form_edit_property_' + <%= @form_prop_id %>).reset();
+  prop_value = document.getElementById('item_' + <%= @item.id %> + '_form_prop_' + <%= @form_prop_id %> + '_value');
+  
+  prop_value.innerHTML = '<%= escape_javascript render("properties/value", item: @item, prop: @prop) %>';  
+  
+  if (property_form_errors)
+    property_form_errors.innerHTML = '';
+  
+
+  // ntm = document.getElementById('niquetamere');
+  // console.log(ntm);
+  // ntm.innerHTML = '<%= escape_javascript render("form_properties/select", fp: @fp, item: @item, prop: @prop) %>';
+  // select = document.getElementById('prout');
+  // select.innerHTML = "toto"
+  // '<%= escape_javascript render("form_properties/options", fp: @fp, item: @item) %>';  
+  // options = document.getElementById('options_' + <%= @form_prop_id %>);
+  // console.log(options);
+  // options.innerHTML = '<%= escape_javascript render("form_properties/options", value: @prop.value, options: @options) %>';  
+  // var last_update = document.getElementsByClassName('item-property-last-update')[0]
+
+<% else %>
+  if (property_form_errors)
+    property_form_errors.innerHTML = '<%= escape_javascript render("form_properties/error", object: @prop) %>';  
+<% end %>
+
+

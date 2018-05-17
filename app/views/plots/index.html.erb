@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Plots</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Length cm</th>
+      <th>Width cm</th>
+      <th>Garden</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @plots.each do |plot| %>
+      <tr>
+        <td><%= plot.name %></td>
+        <td><%= plot.length_cm %></td>
+        <td><%= plot.width_cm %></td>
+        <td><%= plot.garden %></td>
+        <td><%= link_to 'Show', garden_plot_path(id: plot.id) %></td>
+        <td><%= link_to 'Edit', edit_garden_plot_path(id: plot.id) %></td>
+        <td><%= link_to 'Destroy', garden_plot_path(id: plot.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Plot', new_garden_plot_path(garden_id: @garden.id) %>

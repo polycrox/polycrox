@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-sm">
+    <%= form_for(:new_item, url: items_url, method: :post) do |f| %>
+      <div class="form-group">
+        <%= f.label :name, 'Item name' %>
+        <%= f.text_field :name, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :name, 'Group name' %>
+        <div class="row">
+          <div class="col-sm-5">
+            <%= f.label 'choose a group' %>
+            
+            <%= f.select :selected_group_names, @groups.map {|g| g.name }, {include_bank: true},  {class: 'form-control', multiple: true}  %>
+          </div>
+        
+          <div class="col-sm-1">
+            OR
+          </div>
+          
+          <div class="col-sm">
+            <%= f.label 'create a group' %>
+            <%= f.text_field :new_group_name, class: 'form-control' %>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.submit 'Create', class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+
+  </div>
+
+  <div class="col-sm">
+    <h3>Items/Groups</h3>
+    <% @groups.each do |group| %>
+      <h6><%= group.name %></h6>
+      <ul>
+      <% group.items.each do |item| %>
+        <li><%= link_to item.name, item_path(item) %> - <%= link_to 'remove', item_path(item), method: :delete %></li>
+      <% end %>
+      </ul>
+    <% end %>
+  </div>
+</div>

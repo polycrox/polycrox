@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-sm">
+    <h1>Edit <%= link_to @item.name, item_path(@item) %>'s properties</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm">
+    <div class="row">
+      <div class="col-sm">
+        <div id="item_properties">
+          <% FormProperty.all.order(id: :desc).each do |fp| %>
+            <div class="row mb-3">
+              <%= render 'properties/show', fp: fp, item: @item %>
+            </div>
+          <% end %>
+        </div>
+
+      </div>
+
+      <div class="col-sm-4">
+        <%= render 'form_properties/form', item: @item %>
+      </div>
+
+    </div>
+  </div>
+</div>
+

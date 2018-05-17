@@ -1,0 +1,8 @@
+
+<% if @form_prop_option_valid  %>
+  var select_form_property = document.getElementById('select_form_property_' + <%= @fp.id %>);
+  var option = '<option name="<%= @form_prop_option %>"><%= @form_prop_option %></option>';
+  select_form_property.insertAdjacentHTML('afterbegin', option);
+<% end %>
+
+document.getElementById('form_create_property_' + <%= @fp.id %> + '_option').reset();

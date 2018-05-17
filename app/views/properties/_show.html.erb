@@ -1,0 +1,26 @@
+<% prop = item.hash_properties_objects[fp.name.to_sym] %>
+
+<div id="form_property_<%= fp.id %>" class="item-property col-sm">
+  <div class="card">
+    <div class="card-header"><%= fp.name %></div>
+    <div class="card-body">
+    
+      <div class="row">
+        <div class="col-sm">
+          <p><%= fp.description %></p>
+        </div>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="col-sm" id="item_<%= item.id %>_form_prop_<%= fp.id %>_value">
+          <%= render 'properties/value', item: item, prop: prop %>
+        </div>
+        <div class="col-sm" id="niquetamere">
+          <%= render "form_properties/#{fp.html}", fp: fp, item: item, prop: prop %>
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+</div>

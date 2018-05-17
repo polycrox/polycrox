@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @garden.name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @garden.location %>
+</p>
+
+<%= link_to 'Edit', edit_garden_path(@garden) %> |
+<%= link_to 'Back', gardens_path %>
+
+
+<%= render template: 'plots/index' %>

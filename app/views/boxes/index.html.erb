@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Boxes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pos x</th>
+      <th>Pos y</th>
+      <th>Plot</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @boxes.each do |box| %>
+      <tr>
+        <td><%= box.pos_x %></td>
+        <td><%= box.pos_y %></td>
+        <td><%= box.plot %></td>
+        <td><%= link_to 'Show', garden_plot_box_path(id: box.id, plot_id: @plot.id) %></td>
+        <td><%= link_to 'Edit', edit_garden_plot_box_path(id: box.id, plot_id: @plot.id) %></td>
+        <td><%= link_to 'Destroy', garden_plot_box_path(id: box.id, plot_id: @plot.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Box', new_garden_plot_box_path(plot_id: @plot.id) %>

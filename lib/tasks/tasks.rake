@@ -8,6 +8,22 @@ task update_items_groups: :environment do
   end
 end
 
+namespace :import do
+  desc "import items and groups"
+  task items_groups: :environment do
+    File.open('last_export_items_groups.txt', 'r') do |f|
+      f.read.each_line do |line|
+        item_name, group_names = line.split(';')
+        item = ItemBuilder.new(item_name: item_name, group_names: group_names.split(','))
+        if Rails.env.production?
+          item.save
+          puts "."
+        end
+      end
+    end
+  end
+end
+
 namespace :export do 
   desc "export items and groups"
   task items_groups: :environment do

@@ -1,14 +1,12 @@
 class ItemsController < ApplicationController
+  before_action :set_item, only: [:show, :destroy]
   before_action :set_items, only: [:index]
   before_action :set_groups, only: [:index]
 
   def index
-    # @item_groups = ItemGroup.all.collect {|group| group.name }
   end
 
   def show
-    item
-        
   end
 
   def create
@@ -21,21 +19,17 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    item.destroy
+    binding.pry
+    @item.destroy
     redirect_to items_path
   end
-
-  # def edit
-  #   item
-  #   @form_properties = FormProperty.all
-  # end
   
   private
   def new_item_params
     params.require(:new_item).permit(:name, :new_group_name, selected_group_names: [])
   end
 
-  def item
+  def set_item
     @item = Item.find(params[:id])
   end
 

@@ -22,11 +22,24 @@
           </li>
         </ul>
 
+
+        <input type="button" onclick="document.getElementById('search-bar').style.display = 'block'" value="SEARCH" />
       </div>
     </nav>
     <div class="container">
       
-      <%= yield %>
+      <div class="row">
+        <div class="col-sm">
+          <%= yield %>
+        </div>
+        <div class="col-sm-2" id="search-bar" style="display:none">
+          <h1>SEARCH BAR</h1>
+          <%= form_for(:object_search, url: objects_path, method: :post, remote: true, html: {id: 'object_search_form'}) do |f| %>
+            <%= f.text_field :token, {class: 'form-control', onkeydown: "submitSearchForm()", autocomplete: "off" } %>
+          <% end %>
+          <div class="search-results">
+          </div>
+        </div>
     </div>
   </body>
 </html>

@@ -1,0 +1,25 @@
+<div class="row mb-4">
+  <div class="col-sm card">
+    <h2>Relationships - <small><%= link_to 'edit', item_relationships_path(@item) %></small></h2>
+
+    <% if @item.friends.present? %>
+      Friends
+      <ul>
+        <li>items: <%= @item.item_friends.map {|i| i.name }.join(',') %></li>
+        <li>groups: <%= @item.group_friends.map {|i| i.name }.join(',') %></li>
+      </ul>
+    <% elsif %>
+      <%= @item.name %> has no friend yet. :'(
+    <% end %>
+
+    <% if @item.enemies.present? %>
+      Enemies
+      <ul>
+        <li>items: <%= @item.item_enemies.map {|i| i.name }.join(',') %></li>
+        <li>groups: <%= @item.group_enemies.map {|i| i.name }.join(',') %></li>
+      </ul>
+    <% elsif %>
+      <%= @item.name %> has no enemy yet. :)
+    <% end %>      
+  </div>  
+</div>

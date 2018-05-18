@@ -1,0 +1,10 @@
+<h6>items</h6>
+<% results[:items].each do |item| %>
+  <%= link_to item.name, item_path(item) %>
+  <br />
+<% end %>
+<h6>groups</h6>
+<% results[:groups].each do |group| %>
+  <%= link_to group.name, group_path(group) %>
+  <br />
+<% end %>

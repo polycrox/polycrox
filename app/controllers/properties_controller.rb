@@ -13,6 +13,7 @@ class PropertiesController < ApplicationController
       
       # next if !hash["value"].present? || hash["value"].empty? || hash["value"].nil?
       if hash["value"].is_a? Array
+        hash["value"].delete('')
         value = hash["value"].join(',')
       else
         value = hash["value"]
@@ -34,7 +35,9 @@ class PropertiesController < ApplicationController
 
   def destroy
     @form_prop_id = @property.form_property_id
+    @fp = @property.form_property
     @property.destroy
+
   end
   
   private

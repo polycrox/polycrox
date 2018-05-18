@@ -4,95 +4,28 @@
   </div>
 </div>
 
-<div class="row">
-  <div class="col-sm">
-    <h2>Properties - <small><%= link_to 'edit', edit_item_properties_path(@item) %></small></h2>
-    <% @item.hash_properties_objects.each do |prop_name, prop_object| %>
-      <b><%= prop_name %></b>: <%= prop_object.value %>
-      <hr />
-    <% end %>
-  </div>  
-</div>
+<%= render 'properties', item: @item %>
 
-<hr />
+<%= render 'groups', item: @item %>
 
-<div class="row">  
-  <div class="col-sm">
+<%= render 'relationships', item: @item %>
+
+<div class="row mb-4">  
+  <div class="col-sm card">
     <h2>Square Foot Gardening</h2>
   </div>
 </div>
-<hr />
 
-<div class="row">  
-  <div class="col-sm">
-    <h2>Groups</h2>
-    <ul>
-    <% @item.groups.each do |group| %>
-      <li><%= group.name %> - <%= link_to 'remove' %></li>
-    <% end %>
-    </ul>
-  </div>
-</div>
 
-<hr />
-<div class="row">
-  <div class="col-sm">
-    <h2>Relationships</h2>
-    <h3>at item level</h3>
-    tomato is
-    <select>
-      <option value="friends">friend</option>
-      <option value="enemies">not friend</option>
-    </select>
-    with
-    <select>
-      <option disabled selected>another item</option>
-      <% Item.all.each do |item| %>
-        <% next if item.id == @item.id %>
-        <option value="<%= item.id %>"><%= item.name %></option>
-      <% end %>
-    </select>
-    or with
-    <select>
-      <option disabled selected>a group of items</option>
-      <% Group.all.each do |group| %>
-        <% next if @item.groups.include?(group) %>
-        <option value="<%= group.id %>"><%= group.name %></option>
-      <% end %>
-    </select>
 
-    <h3>at group level</h3>
-    <% @item.groups.each do |item_group| %>
-      <%= item_group.name %> is
-      <select>
-        <option value="friends">friend</option>
-        <option value="enemies">not friend</option>
-      </select>
-      with
-      <select>
-        <option disabled selected>another item</option>
-        <% Item.all.each do |item| %>
-          <% next if item.id == @item.id %>
-          <option value="<%= item.id %>"><%= item.name %></option>
-        <% end %>
-      </select>
-      or with
-      <select>
-        <option disabled selected>a group of items</option>
-        <% Group.all.each do |group| %>
-          <% next if item_group.id == group.id %>
-          <option value="<%= group.id %>"><%= group.name %></option>
-        <% end %>
-      </select>  
-    <% end %>
-      
-  </div>  
-</div>
 
-<hr />
 
-<div class="row">
-  <div class="col-sm">
+
+
+
+
+<div class="row mb-4">
+  <div class="col-sm card">
     <h2>Notes</h2>
   </div>  
 </div>

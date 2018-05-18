@@ -1,0 +1,15 @@
+<h5>Groups</h5>
+
+<ul>
+  <% other_groups.each do |other_group| %>
+    <% relation = object.relationships.find do |relation| %>
+      <% relation.send("#{object.class.to_s.downcase}_id") == object.id and relation.other_group_id == other_group.id %>
+    <% end %>
+    <li><%= other_group.name %> -
+        <% if relation %>
+          <%= link_to 'delete item_item relation', delete_relation_path(redirect_id: @redirect_id, relation_id: relation.id), method: :delete %>
+        <% end %>
+    </li>
+
+  <% end %>
+</ul>

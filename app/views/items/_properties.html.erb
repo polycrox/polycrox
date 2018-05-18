@@ -1,0 +1,9 @@
+<div class="row mb-4">
+  <div class="col-sm card">
+    <h2>Properties - <small><%= link_to 'edit', edit_item_properties_path(item) %></small></h2>
+    <% item.hash_properties_objects.each do |prop_name, prop_object| %>
+      <b><%= prop_name %></b>: <%= prop_object.value %>
+      <hr />
+    <% end %>
+  </div>  
+</div>

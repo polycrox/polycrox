@@ -1,0 +1,60 @@
+<div class="row">
+  <div class="col-sm-12">
+    <h4>At the item level</h4>
+    <%= @item.name %> is
+    <%= form_for(:item_relation, method: :post, url: item_relationships_path(@item)) do |f| %>
+      <%= f.select :is_friend, [["friend", true], ["not friend", false]] %>
+      with
+      <%= f.select :other_item_id, (Item.all - [@item] - @item.friends - @item.enemies).map {|i| [i.name, i.id]}, {include_blank: true}, {id: 'item_relation_item', onchange: "resetRelationsSelect('item_relation_group')"} %>
+      or with
+
+      <%= f.select :other_group_id, (Group.all - @item.groups - @item.group_friends - @item.group_enemies).map {|g| [g.name, g.id]}, {include_blank: true}, {id: 'item_relation_group', onchange: "resetRelationsSelect('item_relation_item')" } %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+
+  <div class="col-sm">
+    <h4>Friends</h4>
+    <%= render 'relationships/object_item_relations', item: @item, object: @item, other_items: @item.item_friends %>
+    <%= render 'relationships/object_group_relations', item: @item, object: @item, other_groups: @item.group_friends %>
+
+  </div>
+  <div class="col-sm">
+    <h4>Enemies</h4>
+    <%= render 'relationships/object_item_relations', item: @item, object: @item, other_items: @item.item_enemies %>
+    <%= render 'relationships/object_group_relations', item: @item, object: @item, other_groups: @item.group_enemies %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <h4>At the group level</h4>
+    <% @item.groups.each do |group| %>
+      <h6><%= group.name %></h6>
+      <%= form_for(:group_relation, method: :post, url: item_group_relationships_path(item_id: @item.id, group_id: group.id)) do |f| %>
+        <%= f.select :is_friend, [["friend", true], ["not friend", false]] %>
+        with
+        <%= f.select :other_item_id, (Item.all - group.items - group.friends - group.enemies).map {|i| [i.name, i.id]}, {include_blank: true}, {id: 'item_relation_item', onchange: "resetRelationsSelect('item_relation_group')"} %>
+        or with
+
+        <%= f.select :other_group_id, (Group.all - [group] - group.group_friends - group.group_enemies).map {|g| [g.name, g.id]}, {include_blank: true}, {id: 'item_relation_group', onchange: "resetRelationsSelect('item_relation_item')" } %>
+        <%= f.submit %>
+      <% end %>
+
+      <div class="row">
+        <div class="col-sm">
+          <h4>Friends</h4>
+          <%= render 'relationships/object_item_relations', item: @item, object: group, other_items: group.item_friends %>
+          <%= render 'relationships/object_group_relations', item: @item, object: group, other_groups: group.group_friends %>
+        </div>
+        <div class="col-sm">
+          <h4>Enemies</h4>
+          <%= render 'relationships/object_item_relations', item: @item, object: group, other_items: group.item_enemies %>
+          <%= render 'relationships/object_group_relations', item: @item, object: group, other_groups: group.group_enemies %>
+        </div>
+
+      </div>
+         
+    <% end %>
+  </div>
+</div>

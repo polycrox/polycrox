@@ -12,3 +12,13 @@
 //
 //= require rails-ujs
 //= require_tree .
+
+
+function resetRelationsSelect(select_id) {
+  document.getElementById(select_id).selectedIndex = -1;
+}
+
+function submitSearchForm() {
+  form = document.getElementById('object_search_form');
+  Rails.fire(form, 'submit')
+}

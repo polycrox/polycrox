@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180516203640) do
+ActiveRecord::Schema.define(version: 20180517151834) do
 
   create_table "boxes", force: :cascade do |t|
     t.integer "pos_x"
@@ -94,6 +94,7 @@ ActiveRecord::Schema.define(version: 20180516203640) do
     t.boolean "is_friend"
     t.integer "other_item_id"
     t.integer "group_id"
+    t.integer "other_group_id"
     t.index ["item_id"], name: "index_relationships_on_item_id"
   end
 

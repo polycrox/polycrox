@@ -1,0 +1,13 @@
+<h5>Items</h5>
+<ul>
+  <% other_items.each do |other_item| %>
+    <% relation = object.relationships.find do |relation| %>
+      <% relation.send("#{object.class.to_s.downcase}_id") == object.id and relation.other_item_id == other_item.id %>
+    <% end %>
+    <li><%= other_item.name %> -
+        <% if relation %>
+          <%= link_to 'delete item_item relation', delete_relation_path(redirect_id: @redirect_id, relation_id: relation.id), method: :delete %>
+        <% end %>
+    </li>
+  <% end %>
+</ul>

@@ -1,49 +1,83 @@
-class Relationship < ApplicationRecord
-
-  def items
-    @items ||= if other_item_id.present?
-      Item.find(other_item_id)
-    else
-      Group.find(group_id).items
-    end 
-  end
-end
-
 class Item < ApplicationRecord
 
   validates :name, :groups, presence: true
 
   has_and_belongs_to_many :groups, join_table: 'items_groups'
   
-
+  has_many :relationships
   # module RELATIONSHIPS
-  has_many :item_group_friends, -> { where(is_friend: true)}, class_name: 'Relationship', foreign_key: :item_id
-  has_many :item_group_enemies, -> { where(is_friend: false)}, class_name: 'Relationship', foreign_key: :item_id
+  # has_many :item_group_friends, -> { where(is_friend: true)}, class_name: 'Relationship', foreign_key: :item_id
+  # has_many :item_group_enemies, -> { where(is_friend: false)}, class_name: 'Relationship', foreign_key: :item_id
 
-  has_many :indirect_friends, -> { where(is_friend: true)}, class_name: 'Relationship', foreign_key: :other_item_id
+  
+  # has_many :indirect_friends, -> { where(is_friend: true)}, class_name: 'Relationship', foreign_key: :other_item_id
 
-  def friends
-    @friends ||= item_group_friends.each_with_object([]) do |r, friends|
-      if r.other_item_id.present?
-        friends.push(Item.find(r.other_item_id))
-      elsif r.group_id.present?
-        Group.find(r.group_id).items.each do |item|
-          friends.push(item)
-        end
+  has_many :item_friend_relations, 
+    -> { where(is_friend: true, other_group_id: nil, group_id: nil)}, 
+    class_name: 'Relationship', 
+    foreign_key: :item_id
+
+  def item_friends
+    @item_friends ||= item_friend_relations.each_with_object([]) do |relation, item_friends|
+      item_friends.push(Item.find(relation.other_item_id))
+    end
+  end
+
+  has_many :group_friend_relations, 
+    -> { where(is_friend: true, other_item_id: nil, group_id: nil)}, 
+    class_name: 'Relationship', 
+    foreign_key: :item_id
+
+  def group_friends
+    @group_friends ||= group_friend_relations.each_with_object([]) do |relation, group_friends|
+      group_friends.push(Group.find(relation.other_group_id))
+    end
+  end
+
+  def group_friends_to_items
+    @group_friends_to_items ||= group_friends.each_with_object([]) do |group, items|
+      group.items.each do |item|
+        items.push(item)
       end
     end
   end
 
-  def enemies
-    @enemies ||= item_group_enemies.each_with_object([]) do |r, enemies|
-      if r.other_item_id.present?
-        enemies.push(Item.find(r.other_item_id))
-      elsif r.group_id.present?
-        Group.find(r.group_id).items.each do |item|
-          enemies.push(item)
-        end
+  def friends
+    @friends ||= item_friends + group_friends_to_items
+  end
+
+  has_many :item_enemy_relations, 
+    -> { where(is_friend: false, other_group_id: nil, group_id: nil)}, 
+    class_name: 'Relationship', 
+    foreign_key: :item_id
+
+  def item_enemies
+    @item_enemies ||= item_enemy_relations.each_with_object([]) do |relation, item_enemies|
+      item_enemies.push(Item.find(relation.other_item_id))
+    end    
+  end
+
+  has_many :group_enemy_relations, 
+    -> { where(is_friend: false, other_item_id: nil, group_id: nil)}, 
+    class_name: 'Relationship', 
+    foreign_key: :item_id
+
+  def group_enemies
+    @group_enemies ||= group_enemy_relations.each_with_object([]) do |relation, group_enemies|
+      group_enemies.push(Group.find(relation.other_group_id))
+    end
+  end
+
+  def group_enemies_to_items
+    @group_enemies_to_items ||= group_enemies.each_with_object([]) do |group, items|
+      group.items.each do |item|
+        items.push(item)
       end
     end
+  end  
+
+  def enemies
+    @enemies ||= item_enemies + group_enemies_to_items
   end  
 
   # module PROPERTIES

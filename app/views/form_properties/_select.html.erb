@@ -7,7 +7,7 @@
   <div class="col-sm">
     <%= form_for('edit_property', url: item_properties_path(item_id: item.id), remote: true, html: {class: 'form-inline', id: "form_edit_property_#{fp.id}"}) do |f| %>
       <div id="prout" class="form-group">
-        <%= render 'form_properties/options', fp: fp, item: item %>
+        <%= render 'form_properties/options', fp: fp, item: item, value: nil %>
           
         
       </div>

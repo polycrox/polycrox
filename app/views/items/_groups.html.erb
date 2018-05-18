@@ -1,0 +1,10 @@
+<div class="row mb-4">  
+  <div class="col-sm card">
+    <h2>Groups</h2>
+    <ul>
+    <% item.groups.each do |group| %>
+      <li><%= group.name %> - <%= link_to 'remove' %></li>
+    <% end %>
+    </ul>
+  </div>
+</div>

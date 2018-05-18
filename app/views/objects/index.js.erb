@@ -1,0 +1,3 @@
+
+search_results = document.getElementsByClassName('search-results')[0]
+search_results.innerHTML = '<%= escape_javascript render("objects/search", results: @results) %>';  

@@ -3,6 +3,7 @@ class NurseriesController < ApplicationController
   before_action :set_nursery, only: [:show]
   
   def show
+    
   end
 
   def set_garden

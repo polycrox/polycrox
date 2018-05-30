@@ -1,6 +1,5 @@
 class Garden < ApplicationRecord
   has_many :plots
-  has_many :crops
   has_one :nursery
 
   def after_save

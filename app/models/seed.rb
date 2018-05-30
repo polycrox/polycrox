@@ -1,4 +1,5 @@
 
 class Seed < NurseryItem
-  
+
+
 end

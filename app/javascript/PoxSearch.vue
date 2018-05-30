@@ -1,5 +1,13 @@
 <template>
-  <div class='form-group' v-if='ui.showInput'>
+  <select class='custom-select' v-model='selectedItem' v-on:change='sendEvent()'>
+    <option disabled selected>choose item</option>
+    <option 
+      v-for='(item, index) in items'
+      v-bind:value="item">
+      {{ item.name }}
+    </option>
+  </select>
+<!--   <div class='form-group' v-if='ui.showInput'>
     <label v-if='label'>{{ label }}</label>
     <input 
       placeholder='search for an item' type="text" class='form-control' v-model="token" 
@@ -42,7 +50,7 @@
         </ul>
       </div>
     </div>
-  </div>
+  </div> -->
   
 </template>
 
@@ -51,6 +59,8 @@ export default {
   props: ['label', 'object', 'options'],
   data: function() {
     return {
+      items: [],
+      selectedItem: null,
       token: null,
       completions: [],
       ui: {
@@ -61,8 +71,11 @@ export default {
     }
   },
   mounted: function() {
-    if (this.options && this.options.showEdit)
-      this.ui.showEdit = this.options.showEdit
+    this.$http.get('/items').then(response => {
+      this.items = response.body
+    })
+    // if (this.options && this.options.showEdit)
+    //   this.ui.showEdit = this.options.showEdit
   },
   computed: {
     selectedObject: function() {
@@ -73,6 +86,9 @@ export default {
     },    
   },
   methods: {
+    sendEvent: function() {
+      this.$emit('pox-search-selected', this.selectedItem)
+    },
     autoCompletion: function(token) {
       this.$http.post('/objects/' + this.object, {object_search: {token: token}}).then(response => {
         let _this = this

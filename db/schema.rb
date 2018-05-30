@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180527162611) do
+ActiveRecord::Schema.define(version: 20180530145040) do
 
   create_table "boxes", force: :cascade do |t|
     t.integer "pos_x"
@@ -24,15 +24,12 @@ ActiveRecord::Schema.define(version: 20180527162611) do
   create_table "crops", force: :cascade do |t|
     t.date "date"
     t.boolean "active", default: false
-    t.integer "garden_id"
-  end
-
-  create_table "crops_items_plots", force: :cascade do |t|
-    t.integer "crop_id"
-    t.integer "item_id"
     t.integer "plot_id"
-    t.index ["crop_id"], name: "index_crops_items_plots_on_crop_id"
-    t.index ["item_id"], name: "index_crops_items_plots_on_item_id"
+    t.integer "item_id"
+    t.string "state"
+    t.boolean "present_in_plot", default: true
+    t.index ["item_id"], name: "index_crops_on_item_id"
+    t.index ["plot_id"], name: "index_crops_on_plot_id"
   end
 
   create_table "fidjis", force: :cascade do |t|

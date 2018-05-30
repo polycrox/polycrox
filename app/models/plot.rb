@@ -1,15 +1,12 @@
 class Plot < ApplicationRecord
   belongs_to :garden
   has_many :boxes
+  has_many :crops
 
 
-  has_and_belongs_to_many :crops, 
-    join_table: 'crops_items_plots',
-    class_name: 'Crop'
-
-  has_and_belongs_to_many :items, 
-    join_table: 'crops_items_plots', 
-    class_name: 'Item'
+  # has_and_belongs_to_many :items, 
+  #   join_table: 'crops_items_plots', 
+  #   class_name: 'Item'
 
   
   before_save :set_default

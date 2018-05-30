@@ -1,17 +1,13 @@
-<div class="row">
-  
+
+ <div class="row">
   <div class="col-sm-12">
     <h1><%= @garden.name %> Nursery</h1>
   </div>
+</div>
   
-  <div class="col-sm-3">
-    <h3>Add an item to the nursery</h3>
-
-    <nursery-item-form
-      :nursery='<%= @nursery.to_json %>'
-      >
-    </nursery-item-form>
-  </div>
+  <pox-nursery-editor
+    :nursery='<%= @nursery.to_json %>'>
+  </pox-nursery-editor>
 
 <ul>
 <li>stock seeds

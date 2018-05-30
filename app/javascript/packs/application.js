@@ -19,6 +19,7 @@ import PoxSqfEditor from '../PoxSqfEditor'
 import PoxSqfSquareShape from '../PoxSqfSquareShape'
 import PoxSqfCornerShape from '../PoxSqfCornerShape'
 
+import PoxNurseryEditor from '../PoxNurseryEditor'
 import PoxNurseryItemForm from '../PoxNurseryItemForm'
 
 import PoxItemsGroups from '../PoxItemsGroups'
@@ -34,7 +35,7 @@ Vue.component('pox-sqf-square-shape', PoxSqfSquareShape)
 Vue.component('pox-sqf-corner-shape', PoxSqfCornerShape)
 Vue.component('pox-nursery-item-form', PoxNurseryItemForm)
 Vue.component('pox-items-groups', PoxItemsGroups)
-
+Vue.component('pox-nursery-editor', PoxNurseryEditor)
 document.addEventListener('DOMContentLoaded', () => {
   
   const app = new Vue({

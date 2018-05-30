@@ -16,16 +16,9 @@
   <!-- nursery.item -->
   <div class='form-group'>
     <label>Item</label>
-    <div v-if='!showSearchItem'>
-      {{ nurseryItem.item.name }}
-      <a v-on:click='showSearchItem = true'>change</a>
-    </div>
      
     <pox-search
-      v-if='showSearchItem'
-      :object='"item"' 
-      :options='{hide_input: false}'
-      v-on:pox-search-submit="chooseItem($event)">    
+      v-on:pox-search-selected="selectItem($event)">    
     </pox-search>
   </div>
   <!-- code a search or create component -->
@@ -41,19 +34,19 @@
   </div>
 
 
-  <div class='form-group'>
+  <div class='form-group' v-if='nurseryItem.type != "Seed"'>
     <label>birthdate</label>
     <input type="text" class='form-control' v-model='nurseryItem.birthdate' />
   </div>
 
-  <div class="form-group">
+  <!-- <div class="form-group" v-if='nurseryItem.type != "Seed"'>
     <label class="">happiness</label>
     <br />
     <div class="form-check form-check-inline" v-for="i in 5">
       <input type="radio" class="form-check-input" v-bind:value='i' v-model='nurseryItem.happiness' />
       <label class='form-check-label'>{{ i }}</label>
     </div>
-  </div>
+  </div> -->
 
   <button class="btn btn-primary" v-on:click='submitForm()'>create</button>
   </div>
@@ -80,15 +73,13 @@ export default {
     })
   },
   methods: {
-    chooseItem: function(item) {
+    selectItem: function(item) {
       this.nurseryItem.item_id = item.id
       this.nurseryItem.item = item
-      // hide pox-search
-      this.showSearchItem = false
     },
     submitForm: function() {
       this.$http.post('/gardens/' + this.nursery.garden_id + '/nursery/nursery_items', {nursery_item: this.nurseryItem}).then(response => {
-        this.$emit('pox-new-ns-item', response.body)
+        this.$emit('pox-update-nursery-items', response.body)
       }, response => {
         console.log('fail submitForm nurseryItem')
       })

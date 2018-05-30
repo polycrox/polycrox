@@ -1,49 +1,41 @@
 class CropsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
-  before_action :set_plot, only: [:index, :create, :update, :add_item, :index_items]
+  before_action :set_plot, only: [:index, :create, :update]
   before_action :check_params, only: [:create]
   
-  before_action :set_crop, only: [:update, :add_item, :index_items]
-  before_action :check_active_crop, only: [:update]
+  before_action :set_crop, only: [:update]
 
   before_action :set_item, only: [:add_item]
 
   def index
-    
-    # render json: {
-    #   active: @plot.garden.crops.find {|crop| crop.active }.to_json,
-    #   past: @plot.garden.crops.find_all {|crop| !crop.active }.to_json
-    # }
-
-    render json: @plot.garden.crops
+    render json: @plot.crops.to_json(include: :item)
   end
 
-  def create
-    crop = Crop.new(garden_id: @plot.garden.id)
-    crop.set_date = params[:crop][:date]
-    if crop.save
-      render json: crop.to_json, status: :ok
-    else
-      render_fail
-    end
-  end
-
-  def add_item
-    cip = CropItemPlot.new(crop_id: @crop.id, item_id: @item.id, plot_id: @plot.id)
-    cip.save
-    render json: @item.to_json, status: :ok
-  end
-
-  def index_items
   
-    render json: CropItemPlot.find_items_for_plot_and_crop(@plot.id, @crop.id)
+  def create
+    qty = params[:qty].to_i
+    
+    begin
+      qty.times do
+        crop = @plot.crops.create(crop_params)
+        crop.set_date = params[:crop][:date]
+        unless crop.save
+          raise ArgumentError.new("failed to save crop!")
+        end
+      end
+    rescue ArgumentError => e  
+      render_fail and return
+    end
+    
+    render json: @plot.crops.last(qty).to_json(include: :item), status: :ok
+
   end
 
   def update
+    # update state, present_in_plot, position
     
-    @crop.active = crop_params[:active]
-    if @crop.save
+    if @crop.update(crop_params)
       render json: @crop.to_json, status: :ok
     else
       render_fail
@@ -68,17 +60,10 @@ class CropsController < ApplicationController
     end
   end
 
-  def check_active_crop
-    if crop_params[:active]
-      return render_fail if @plot.crops.find do |crop|
-        crop.active
-      end
-    end
+  def crop_params
+    params.require(:crop).permit(:item_id, :date, :present_in_plot)
   end
 
-  def crop_params
-    params.require(:crop).permit(:active)
-  end
 
   def render_fail
     render json: {}, status: :unprocessable_entity

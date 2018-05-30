@@ -42,9 +42,12 @@ Rails.application.routes.draw do
     end
   end
 
-  get 'plots/:plot_id/crops', to: 'crops#index'
-  post 'plots/:plot_id/crops', to: 'crops#create'
-  put 'plots/:plot_id/crops/:id', to: 'crops#update'
+  resources :plots do
+    resources :crops
+  end
+  # get 'plots/:plot_id/crops', to: 'crops#index'
+  # post 'plots/:plot_id/crops', to: 'crops#create'
+  # put 'plots/:plot_id/crops/:id', to: 'crops#update'
 
   get 'plots/:plot_id/crops/:id/items', to: 'crops#index_items'
   post 'plots/:plot_id/crops/:id/items', to: 'crops#add_item'

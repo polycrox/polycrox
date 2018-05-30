@@ -4,6 +4,15 @@ class ItemsController < ApplicationController
   before_action :set_groups, only: [:index]
 
   def index
+    respond_to do |format|
+      format.html {
+        render :index
+      }
+      
+      format.json {
+        render json: Item.all.order(name: :asc)
+      }
+    end
   end
 
   def show

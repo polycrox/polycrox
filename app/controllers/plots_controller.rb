@@ -30,7 +30,7 @@ class PlotsController < ApplicationController
 
     respond_to do |format|
       if @plot.save
-        format.html { redirect_to garden_plot_url(id: @plot.id), notice: 'Plot was successfully created.' }
+        format.html { redirect_to edit_garden_plot_url(id: @plot.id), notice: 'Plot was successfully created.' }
         format.json { render :show, status: :created, location: @plot }
       else
         format.html { render :new }

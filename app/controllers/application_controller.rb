@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   def garden_template
     @layout_garden_template = false
   
-    if params[:garden_id].present? || (params[:controller] == "gardens" && params[:action] != "index")
+    if params[:garden_id].present? || (params[:controller] == "gardens" && params[:action] == "show")
       @layout_garden_template = true
     end
   end

@@ -27,8 +27,7 @@
   </div>
 
   <div class="field">
-    <%= form.label :garden_id %>
-    <%= form.text_field :garden_id, id: :plot_garden_id, value: @garden.id %>
+    <%= form.hidden_field :garden_id, id: :plot_garden_id, value: @garden.id %>
   </div>
 
   <div class="actions">

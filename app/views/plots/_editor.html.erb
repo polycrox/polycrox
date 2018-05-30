@@ -1,0 +1,23 @@
+<editor 
+  :garden='<%= garden.to_json(except: [:created_at, :updated_at]) %>'
+  :plot='<%= plot.to_json(except: [:created_at, :updated_at]) %>'
+  :boxes='<%= plot.boxes.to_json(except: [:created_at, :updated_at]) %>'>
+</editor>
+
+<app :plot="<%= plot.to_json %>"></app>
+<app inline-template :plot="<%= "inline-template".to_json %>">
+  <!-- can use <%#= form_with %> -->
+  <h1>{{ plot }}</h1>
+</app>
+
+<%#= content_tag :div, 
+    id: 'editor', 
+    data: { 
+      plot: plot.to_json(except: [:created_at, :updated_at]),
+      garden: plot.garden.to_json(except: [:plot_id, :created_at, :updated_at])
+    } do %>
+
+  <%# form_for('model') do |f| %>
+    <!-- <input type="text" v-model="plot.name" /> -->
+  <%# end %>
+<%# end %>

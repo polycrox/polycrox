@@ -10,6 +10,16 @@
   <%= @garden.location %>
 </p>
 
+
+<h3>Garden's crops</h3>
+<% @garden.crops.each do |crop| %>
+  id <%= crop.id %>
+  <%= crop.date %>
+  <%= crop.plots.inspect %>
+  
+<% end %>
+
+<hr />
 <%= link_to 'Edit', edit_garden_path(@garden) %> |
 <%= link_to 'Back', gardens_path %>
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180517151834) do
+ActiveRecord::Schema.define(version: 20180527162611) do
 
   create_table "boxes", force: :cascade do |t|
     t.integer "pos_x"
@@ -19,6 +19,20 @@ ActiveRecord::Schema.define(version: 20180517151834) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["plot_id"], name: "index_boxes_on_plot_id"
+  end
+
+  create_table "crops", force: :cascade do |t|
+    t.date "date"
+    t.boolean "active", default: false
+    t.integer "garden_id"
+  end
+
+  create_table "crops_items_plots", force: :cascade do |t|
+    t.integer "crop_id"
+    t.integer "item_id"
+    t.integer "plot_id"
+    t.index ["crop_id"], name: "index_crops_items_plots_on_crop_id"
+    t.index ["item_id"], name: "index_crops_items_plots_on_item_id"
   end
 
   create_table "fidjis", force: :cascade do |t|
@@ -69,6 +83,23 @@ ActiveRecord::Schema.define(version: 20180517151834) do
     t.index ["item_id"], name: "index_items_groups_on_item_id"
   end
 
+  create_table "nurseries", force: :cascade do |t|
+    t.integer "garden_id"
+    t.index ["garden_id"], name: "index_nurseries_on_garden_id"
+  end
+
+  create_table "nursery_items", force: :cascade do |t|
+    t.integer "item_id"
+    t.string "cultivar"
+    t.integer "quantity", default: 1
+    t.date "birthdate"
+    t.integer "happiness"
+    t.string "state"
+    t.string "type"
+    t.integer "nursery_id"
+    t.index ["item_id"], name: "index_nursery_items_on_item_id"
+  end
+
   create_table "plots", force: :cascade do |t|
     t.string "name"
     t.integer "length_cm"
@@ -96,6 +127,12 @@ ActiveRecord::Schema.define(version: 20180517151834) do
     t.integer "group_id"
     t.integer "other_group_id"
     t.index ["item_id"], name: "index_relationships_on_item_id"
+  end
+
+  create_table "spacings", force: :cascade do |t|
+    t.string "options"
+    t.integer "item_id"
+    t.index ["item_id"], name: "index_spacings_on_item_id"
   end
 
 end

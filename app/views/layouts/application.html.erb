@@ -5,41 +5,36 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
-    <!-- , 'data-turbolinks-track': 'reload' -->
     <%= javascript_include_tag 'application' %>
-    <!-- , 'data-turbolinks-track': 'reload' -->
+    
+    <%= stylesheet_pack_tag 'application' %>
+    <%= javascript_pack_tag "application" %>
   </head>
 
   <body>
+    <div data-behaviour="vue">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
         <%= link_to 'Polycrox', root_url, class: 'navbar-brand' %>
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <%= link_to 'items/groups', items_path %>
-            <%= link_to 'properties', items_path %>
-            <%= link_to 'gardens', items_path %>
+            <%= link_to 'Plant database', items_path %>
+            <%= link_to 'Gardens', gardens_path %>
+            <%= link_to 'Library', library_path %>
           </li>
         </ul>
-
-
-        <input type="button" onclick="document.getElementById('search-bar').style.display = 'block'" value="SEARCH" />
       </div>
     </nav>
     <div class="container">
       
       <div class="row">
         <div class="col-sm">
+          <% if  @layout_garden_template %>  
+            <%= render template: 'layouts/garden_plots' %>
+          <% end %>
           <%= yield %>
         </div>
-        <div class="col-sm-2" id="search-bar" style="display:none">
-          <h1>SEARCH BAR</h1>
-          <%= form_for(:object_search, url: objects_path, method: :post, remote: true, html: {id: 'object_search_form'}) do |f| %>
-            <%= f.text_field :token, {class: 'form-control', onkeydown: "submitSearchForm()", autocomplete: "off" } %>
-          <% end %>
-          <div class="search-results">
-          </div>
-        </div>
+    </div>
     </div>
   </body>
 </html>

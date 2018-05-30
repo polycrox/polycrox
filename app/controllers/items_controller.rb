@@ -9,6 +9,10 @@ class ItemsController < ApplicationController
   def show
   end
 
+  def count
+    render json: Item.all.count
+  end
+  
   def create
     item = ItemBuilder.new(
       item_name: new_item_params[:name], 

@@ -7,6 +7,10 @@ var property_form_errors = document.getElementById('property_' + <%= @form_prop_
   prop_value = document.getElementById('item_' + <%= @item.id %> + '_form_prop_' + <%= @form_prop_id %> + '_value');
   
   prop_value.innerHTML = '<%= escape_javascript render("properties/value", item: @item, prop: @prop) %>';  
+
+  textatrea = document.getElementById('niquetamere');
+  console.log(textatrea)
+  textatrea.innerHTML = '<%= escape_javascript render("form_properties/#{@fp.html}", fp: @fp, item: @item, value: @prop.value) %>';  
   
   if (property_form_errors)
     property_form_errors.innerHTML = '';

@@ -9,14 +9,37 @@
 
 
 import Vue from 'vue'
-import router from '../router'
-import App from '../components/App.vue'
+import VueResource from 'vue-resource'
+import App from '../App'
+import PoxEditor from '../PoxEditor'
+import PoxEditorCanvas from '../PoxEditorCanvas'
+import PoxSearch from '../PoxSearch'
+import Crops from '../Crops'
+
+import PoxSqfEditor from '../PoxSqfEditor'
+import PoxSqfSquareShape from '../PoxSqfSquareShape'
+import PoxSqfCornerShape from '../PoxSqfCornerShape'
+
+import PoxNurseryItemForm from '../PoxNurseryItemForm'
+
+import PoxItemsGroups from '../PoxItemsGroups'
+
+Vue.use(VueResource)
+
+Vue.component('app', App)
+Vue.component('pox-editor', PoxEditor)
+Vue.component('pox-search', PoxSearch)
+Vue.component('pox-editor-canvas', PoxEditorCanvas)
+Vue.component('crops', Crops)
+Vue.component('pox-sqf-editor', PoxSqfEditor)
+Vue.component('pox-sqf-square-shape', PoxSqfSquareShape)
+Vue.component('pox-sqf-corner-shape', PoxSqfCornerShape)
+Vue.component('pox-nursery-item-form', PoxNurseryItemForm)
+Vue.component('pox-items-groups', PoxItemsGroups)
 
 document.addEventListener('DOMContentLoaded', () => {
-  const el = document.body.appendChild(document.createElement('Hello'))
+  
   const app = new Vue({
-    el,
-    render: h => h(App),
-    router
+    el: '[data-behaviour="vue"]'
   })
 })

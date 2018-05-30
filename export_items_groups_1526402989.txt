@@ -1,0 +1,142 @@
+tomato;solana
+cabbage;brassica
+purple cabbage;brassica
+carrot;apia
+squash;cucurbita
+bean bush;legumino
+potato;solana
+eggplant;solana
+sweet pepper;solana
+chili pepper;solana
+swiss chard;chenopo
+cucumber;cucurbita
+beetroot;chenopo
+celery;apia
+parsley;apia
+kale;brassica
+purple kale;brassica
+spring onion;allium
+onion;allium
+okra;malva
+anise;herbs
+basil;herbs
+borage;herbs
+caraway;herbs
+catnip;herbs
+chamomile;herbs
+chervil;herbs
+coriander;herbs
+dill;herbs
+fennel;herbs
+flax;herbs
+garlic;herbs
+hyssop;herbs
+lavender;herbs
+lemon grass;herbs
+lovage;herbs
+oregano;herbs
+parsley;herbs
+peppermint;herbs
+rosemary;herbs
+sage;herbs
+southernwood;herbs
+spearmint;herbs
+stinging nettle;herbs
+summer savoury;herbs
+tarragon;herbs
+thyme;herbs
+wormwood;herbs
+yarrow;herbs
+alyssum;Flowers
+baby's breadth;Flowers
+bee balm;Flowers
+californian poppy;Flowers
+dianthus;Flowers
+geraniums;Flowers
+larkspur;Flowers
+lupin;Flowers
+marigold;Flowers
+nasturtium;Flowers
+pansy;Flowers
+petunia;Flowers
+phacelia;Flowers
+rose;Flowers
+sunflower;Flowers
+swan plant;Flowers
+sweet pea;Flowers
+tansy;Flowers
+zinnia;Flowers
+apple;fruit trees
+leek;allium
+shallot;allium
+pole beans;legumino
+pea;legumino
+fava bean;legumino
+spinach;chenopo
+broccoli;brassica
+brussels sprout;brassica
+cauliflower;brassica
+kohirabi;brassica
+radish;brassica
+turnip;brassica
+alfafa;cover crop
+melon;cucurbita
+gourd;cucurbita
+pumpkin;cucurbita
+passion fruit;fruit trees
+kei apple;fruit trees
+coaster oak;tree
+bitou;herbs
+saryinga;tree
+silver tree;tree
+carob;fruit trees
+Gazania;Flowers
+aloe vera;tree
+lemon verbana;tree
+sage wood;herbs
+wild sage;herbs
+acacia;tree
+honey suckle;tree
+guava tree;fruit trees
+kikuyu;grass
+macadamia tree;nut tree
+comfrey;herbs
+avocado tree;fruit trees
+perennial basil;herbs
+tree lucerne;tree
+banana;fruit trees
+peach tree;fruit trees
+granada tree;fruit trees
+african wormwood;herbs
+confetti bush;herbs
+orange tree;fruit trees
+brown fig tree;fruit trees
+almond tree;nut tree
+curry bush;herbs
+lemon tree;fruit trees
+fig tree;fruit trees
+noem noem;tree
+spekboom;tree
+plumbago;tree
+pelargonium;Flowers
+wild dagga;tree
+butterfly bush;tree
+olive tree;tree
+pecan tree;nut tree
+rise;aquatic plant
+iris;aquatic plant
+restio;aquatic plant
+daylily;aquatic plant
+sand olive;aquatic plant
+bay leaf;herbs
+soap worth;herbs
+stink bush;herbs
+sour fig;herbs
+rhos;tree
+rue;herbs
+bougainvillea;Flowers
+tee tree;tree
+wild olive;tree
+waterberry;tree
+chive;allium,herbs
+chinese cabbage;brassica

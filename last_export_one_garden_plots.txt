@@ -1,0 +1,3 @@
+Khanysia
+nursery-1;60;60
+north-fence-1;60;60

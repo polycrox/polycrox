@@ -1,8 +1,20 @@
 class Item < ApplicationRecord
 
-  validates :name, :groups, presence: true
+  validates :name, presence: true
+  # :groups, presence: true
+  # an item can exist without belonging to a group
 
+  has_many :spacings
+  
   has_and_belongs_to_many :groups, join_table: 'items_groups'
+
+  has_and_belongs_to_many :crops, 
+    join_table: 'crops_items_plots',
+    class_name: 'Crop'
+
+  has_and_belongs_to_many :plots, 
+    join_table: 'crops_items_plots',
+    class_name: 'Plot'
   
   has_many :relationships
   # module RELATIONSHIPS

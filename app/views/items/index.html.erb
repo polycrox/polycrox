@@ -1,4 +1,8 @@
 <div class="row">
+  <div class="col-sm-8">
+    <pox-items-groups></pox-items-groups>
+  </div>
+
   <div class="col-sm">
     <%= form_for(:new_item, url: items_url, method: :post) do |f| %>
       <div class="form-group">
@@ -30,17 +34,5 @@
       </div>
     <% end %>
 
-  </div>
-
-  <div class="col-sm">
-    <h3>Items/Groups</h3>
-    <% @groups.each do |group| %>
-      <h6><%= group.name %></h6>
-      <ul>
-      <% group.items.each do |item| %>
-        <li><%= link_to item.name, item_path(item) %> - <%= link_to 'remove', item_path(item), method: :delete %></li>
-      <% end %>
-      </ul>
-    <% end %>
   </div>
 </div>

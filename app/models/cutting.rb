@@ -1,0 +1,4 @@
+
+class Cutting < NurseryItem
+  
+end

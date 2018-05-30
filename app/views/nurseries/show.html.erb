@@ -1,0 +1,51 @@
+<div class="row">
+  
+  <div class="col-sm-12">
+    <h1><%= @garden.name %> Nursery</h1>
+  </div>
+  
+  <div class="col-sm-3">
+    <h3>Add an item to the nursery</h3>
+
+    <nursery-item-form
+      :nursery='<%= @nursery.to_json %>'
+      >
+    </nursery-item-form>
+  </div>
+
+<ul>
+<li>stock seeds
+  <ul>
+    <li>item</li>
+    <li>choose or create cultivar</li>
+    <li>quantity</li>
+  </ul>
+</li>
+<li>seedlings
+  <ul>
+    <li>item</li>
+    <li>quantity</li>
+    <li>choose or create cultivar</li>
+    <li>sowing date</li>
+    <li>happiness</li>
+    <li>(age) / (state)</li>
+  </ul>
+</li>
+<li>cuttings
+  <ul>
+    <li>from which item/cultivar</li>
+    <li>date</li>
+    <li>happiness</li>
+    <li>(age) / (state)</li>
+  </ul>
+
+</li>
+
+
+create a cultivar
+  planting schedule: 
+    sow, 
+    transplant, 
+    harvest.
+  how long from from to transplant?
+  how long from transplant to harvest?

@@ -11,10 +11,9 @@
 import Vue from 'vue'
 import VueResource from 'vue-resource'
 import App from '../App'
-import PoxEditor from '../PoxEditor'
-import PoxEditorCanvas from '../PoxEditorCanvas'
+import PoxPlotsEditor from '../PoxPlotsEditor'
 import PoxSearch from '../PoxSearch'
-import Crops from '../Crops'
+import PoxCropsEditor from '../PoxCropsEditor'
 
 import PoxSqfEditor from '../PoxSqfEditor'
 import PoxSqfSquareShape from '../PoxSqfSquareShape'
@@ -27,10 +26,9 @@ import PoxItemsGroups from '../PoxItemsGroups'
 Vue.use(VueResource)
 
 Vue.component('app', App)
-Vue.component('pox-editor', PoxEditor)
+Vue.component('pox-plots-editor', PoxPlotsEditor)
 Vue.component('pox-search', PoxSearch)
-Vue.component('pox-editor-canvas', PoxEditorCanvas)
-Vue.component('crops', Crops)
+Vue.component('pox-crops-editor', PoxCropsEditor)
 Vue.component('pox-sqf-editor', PoxSqfEditor)
 Vue.component('pox-sqf-square-shape', PoxSqfSquareShape)
 Vue.component('pox-sqf-corner-shape', PoxSqfCornerShape)

@@ -27,14 +27,14 @@
     </nav>
     <div class="container">
       
-      <div class="row">
-        <div class="col-sm">
+    
+        
           <% if  @layout_garden_template %>  
             <%= render template: 'layouts/garden_plots' %>
           <% end %>
           <%= yield %>
-        </div>
-    </div>
+        
+    
     </div>
   </body>
 </html>

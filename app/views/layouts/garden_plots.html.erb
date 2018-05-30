@@ -1,22 +1,42 @@
 <%#= link_to 'Destroy', garden_plot_path(id: plot.id, garden_id: @garden.id), method: :delete, data: { confirm: 'Are you sure?' } %>
 
 <div class="row">
-  <div class="col-sm-1 card">
-  <%= link_to @garden.name, garden_path(@garden) %>
+  <div class="col-sm pr-0 ">
+    <div class="card">
+      <div class="card-body">
+        <p class="card-text"><%= link_to @garden.name, garden_path(@garden) %></p>
+      </div>
+    </div>
   </div>
-  <div class="col-sm-1 card">
-  <%= link_to 'Nursery', garden_nursery_path(@garden) %>
-  </div>  
+  <div class="col-sm px-0 mx-0">
+    <div class="card">
+      <div class="card-body">
+        <p class="card-text"><%= link_to 'Nursery', garden_nursery_path(@garden) %></p>
+      </div>
+    </div>
+  </div>
   <% @garden.plots.each do |plot| %>
-    <div class="col-sm-1 card">
-      <%= plot.name %>
-      <%= plot.length_cm %>
-      <%= plot.width_cm %>
-      <%= link_to 'Edit', edit_garden_plot_path(id: plot.id, garden_id: @garden.id) %>
+    <div class="col-sm px-0 mx-0">
+      <div class="card">
+        <div class="card-body">
+          <p class="card-text">
+            <%= plot.name %>
+            <br />
+            <%= link_to 'Edit', edit_garden_plot_path(id: plot.id, garden_id: @garden.id) %>
+          </p>
+        </div>
+      </div>
     </div>
   <% end %>
-  <div class="col-sm-1 card">
-    <%= link_to 'New Plot', new_garden_plot_path(garden_id: @garden.id) %>
+  <div class="col-sm px-0 mx-0">
+    <div class="card text-white bg-success">
+      <div class="card-body">
+        <p class="card-text">
+        <%= link_to 'New Plot', new_garden_plot_path(garden_id: @garden.id), class: 'text-white' %></p>
+      </div>
+    </div>
 
   </div>
 </div>
+
+<hr />

@@ -1,12 +1,7 @@
-<h1>Editing Plot</h1>
-<%#= link_to 'Show', garden_plot_path(id: @plot, garden_id: @garden.id) %> 
-<%#= link_to 'Back', garden_plots_path(garden_id: @garden.id) %>
 
-<%#= render 'form', plot: @plot %>
-<%#= render 'editor', plot: @plot %>
-
-<pox-editor 
+<pox-plots-editor 
   :garden='<%= @garden.to_json(except: [:created_at, :updated_at]) %>'
   :plot='<%= @plot.to_json %>'
   :boxes='<%= @plot.boxes.to_json(except: [:created_at, :updated_at]) %>'>
-</pox-editor>
+</pox-plots-editor>
+  

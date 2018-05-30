@@ -61,7 +61,7 @@ export default {
     }
   },
   mounted: function() {
-    if (this.options.showEdit)
+    if (this.options && this.options.showEdit)
       this.ui.showEdit = this.options.showEdit
   },
   computed: {
@@ -123,7 +123,7 @@ export default {
         this.$emit('pox-search-submit', this.selectedObject)
         this.completions = []
         this.token = null
-        if (this.options.hide_input)
+        if (this.options && this.options.hide_input)
           this.ui.showInput = false
       }
     }

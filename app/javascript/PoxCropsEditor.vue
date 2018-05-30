@@ -4,14 +4,22 @@
     item - position_in_plot - remove
     input pox-search.object(item), age,  create
  -->
-    <crop v-for="(crop, index) in crops" :crop='crop' :plot_id='plot_id'></crop>
+    <h2>Past crops</h2>
+    <pox-plot-crop v-for="(crop, index) in crops" :crop='crop' :plot_id='plot_id'>
+    </pox-plot-crop>
     <hr />
     <div class="col-sm-12">
-      <label>add a past crop</label>
-      <input type="text" v-model="crop.date" />
-      <input class="btn btn-primary" value="add" 
-        v-on:click="submit()"
-        v-on:keyup.enter="submit()" />
+      Add a past crop
+      <form class="form-inline">
+        <div class="form-group">
+
+          <input class='form-control' type="text" v-model="crop.date" placeholder="e.g: 16 september 2017" />
+        </div>
+        <button class="btn btn-primary" 
+          v-on:click="submit()"
+          v-on:keyup.enter="submit()">create</button>
+
+      </form>
     </div>
     
     
@@ -70,12 +78,12 @@
 <script>
 
 import ActiveCrop from './ActiveCrop'
-import Crop from './Crop'
+import PoxPlotCrop from './PoxPlotCrop'
 
 export default {
   components: {
     ActiveCrop,
-    Crop
+    PoxPlotCrop
   },
   props: ['plot_id'],
   data: function () {

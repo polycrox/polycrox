@@ -2,6 +2,10 @@
 
   
     <div class="row">
+      <div class='col-12'>
+        <h2>{{ plot.name }} <small>{{ plot.length_cm }}x{{ plot.width_cm }}</small> <small>{{ boxes.length }} boxes</small></h2>
+        
+      </div>
       <div class="col">
         This plot contains:
         <table class="table">
@@ -88,14 +92,9 @@ export default {
       })
     },
     updateCrops: function(crops) {
-
       crops.forEach((crop) => {
-        console.log(crop)
         this.crops.push(crop)
       })
-    },
-    currentBox: function(x, y) {
-      return this.boxes.find(box => box.pos_x === x && box.pos_y === y);
     }
   }
 }

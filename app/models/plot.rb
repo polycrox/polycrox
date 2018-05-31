@@ -46,8 +46,15 @@ class Plot < ApplicationRecord
     @rows ||= (length_cm ? length_cm : 0) / SQUARE_FOOT_BOX_WIDTH
   end
 
-  def to_json
-    {id: id, name: name, rows: rows, cols: cols}.to_json
+  def as_json options = nil
+    {
+      id: id, 
+      name: name, 
+      rows: rows, 
+      cols: cols,
+      length_cm: length_cm,
+      width_cm: width_cm
+    }.merge(options)
   end
 
 end

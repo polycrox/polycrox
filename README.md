@@ -44,5 +44,13 @@ test:
 	rails s
 
 
+## Deployment
+
+### heroku
+	brew install heroku/brew/heroku
+	heroku login
+	heroku git:remote -a polycrox
+
+
 
 	

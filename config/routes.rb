@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   delete 'relationships/:relation_id/:redirect_id', to: 'relationships#destroy', as: :delete_relation
   # resources :relationships
   post 'objects', to: 'objects#index', as: :objects

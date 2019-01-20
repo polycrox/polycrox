@@ -1,24 +1,48 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Installation
 
-Things you may want to cover:
+	git clone REPO
 
-* Ruby version
+### rvm
+	\curl -sSL https://get.rvm.io | bash -s stable
+	rvm install 2.6.0
+	rvm use 2.6.0
 
-* System dependencies
+### bundler
+	gem install bundler
 
-* Configuration
+### yarn
+	brew install yarn --without-node
+	yarn install
 
-* Database creation
+### gems
+	bundle install --without production
 
-* Database initialization
 
-* How to run the test suite
+### database.yml
+save as config/database.yml
+```
+development:
+	adapter: sqlite3
+	database: db/development.sqlite3
+	pool: 5
+	timeout: 5000
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+test:
+	adapter: sqlite3
+	database: db/test.sqlite3
+	pool: 5
+	timeout: 5000
+```
 
-* ...
+	rake db:create
+	rake db:migrate
+
+### run dev server
+	rails s
+
+
+
+	

@@ -1,0 +1,104 @@
+Run options: include {:locations=>{"./spec/plot_spec.rb"=>[169]}}
+PLOT===plot-1
+=> tomato(solana) (already 0)
+=> bean bush(legumino) (already 0)
+box(1,1): fill 3 x bean bush(legumino)
+=> eggplant(solana) (already 0)
+box(1,1): fill 1 x eggplant(solana)
+=> pepper(solana) (already 0)
+box(1,1) doesnt have 10.0 units (5 units left)
+box(2,1): fill 1 x pepper(solana)
+=> potato(solana) (already 0)
+box(1,1): fill 1 x potato(solana)
+=> chili(solana) (already 0)
+box(1,1) doesnt have 8.0 units (1 units left)
+box(2,1): fill 1 x chili(solana)
+=> swiss chard(chenopo) (already 0)
+box(1,1) doesnt have 4.0 units (1 units left)
+box(2,1) doesnt have 4.0 units (2 units left)
+box(1,2): fill 1 x swiss chard(chenopo)
+=> beetroot(chenopo) (already 0)
+box(1,1): fill 1 x beetroot(chenopo)
+=> spinach(chenopo) (already 0)
+box(1,1) is full
+box(2,1): fill 2 x spinach(chenopo)
+=> tomato(solana) (already 0)
+=> bean bush(legumino) (already 3)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x bean bush(legumino)
+=> eggplant(solana) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 1 x eggplant(solana)
+=> pepper(solana) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 10.0 units (1 units left)
+box(2,2): fill 1 x pepper(solana)
+=> potato(solana) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 4.0 units (1 units left)
+box(2,2): fill 1 x potato(solana)
+=> chili(solana) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 8.0 units (1 units left)
+box(2,2) doesnt have 8.0 units (6 units left)
+No space for chili(solana) in plot
+=> swiss chard(chenopo) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 4.0 units (1 units left)
+box(2,2): fill 1 x swiss chard(chenopo)
+=> beetroot(chenopo) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 1 x beetroot(chenopo)
+=> spinach(chenopo) (already 2)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 2 x spinach(chenopo)
+plot-1 is full
+------
+pool: ["chenopo", "solana", "legumino"]
+pool: tomato,bean bush,eggplant,pepper,potato,chili,swiss chard,beetroot,spinach
+box(1,1):
+- 3 x bean bush(legumino)
+- 1 x eggplant(solana)
+- 1 x potato(solana)
+- 1 x beetroot(chenopo)
+
+box(2,1):
+- 1 x pepper(solana)
+- 1 x chili(solana)
+- 2 x spinach(chenopo)
+
+box(1,2):
+- 1 x swiss chard(chenopo)
+- 3 x bean bush(legumino)
+- 1 x eggplant(solana)
+- 1 x beetroot(chenopo)
+
+box(2,2):
+- 1 x pepper(solana)
+- 1 x potato(solana)
+- 1 x swiss chard(chenopo)
+- 2 x spinach(chenopo)
+
+plot-1 (60x60) has:
+- 6 x bean bush
+- 2 x eggplant
+- 2 x potato
+- 2 x beetroot
+- 2 x pepper
+- 1 x chili
+- 4 x spinach
+- 2 x swiss chard
+.
+
+Finished in 0.0027 seconds (files took 0.91873 seconds to load)
+1 example, 0 failures
+

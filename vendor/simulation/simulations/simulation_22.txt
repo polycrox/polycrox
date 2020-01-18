@@ -1,0 +1,213 @@
+Run options: include {:locations=>{"./spec/plot_spec.rb"=>[169]}}
+PLOT===plot-1
+=> bean bush(legumino) (already 0)
+box(1,1): fill 3 x bean bush(legumino)
+=> cucumber-trellis(cucurbita) (already 0)
+box(1,1): fill 1 x cucumber-trellis(cucurbita)
+=> kale(brassica) (already 0)
+box(1,1) doesnt have 12.0 units (11 units left)
+box(2,1): fill 1 x kale(brassica)
+=> purple kale(brassica) (already 0)
+box(1,1) doesnt have 12.0 units (11 units left)
+box(2,1) doesnt have 12.0 units (8 units left)
+box(1,2): fill 1 x purple kale(brassica)
+=> cucumber-short(cucurbita) (already 0)
+box(1,1): fill 1 x cucumber-short(cucurbita)
+=> squash(cucurbita) (already 0)
+box(1,1): fill 0 x squash(cucurbita)
+=> cabbage(brassica) (already 0)
+box(1,1) doesnt have 12.0 units (6 units left)
+box(2,1) doesnt have 12.0 units (8 units left)
+box(1,2) doesnt have 12.0 units (8 units left)
+box(2,2): fill 1 x cabbage(brassica)
+=> bean bush(legumino) (already 3)
+box(1,1): fill 3 x bean bush(legumino)
+=> cucumber-trellis(cucurbita) (already 1)
+box(1,1) doesnt have 6.0 units (3 units left)
+box(2,1): fill 1 x cucumber-trellis(cucurbita)
+=> kale(brassica) (already 1)
+box(1,1) doesnt have 12.0 units (3 units left)
+box(2,1) doesnt have 12.0 units (2 units left)
+box(1,2) doesnt have 12.0 units (8 units left)
+box(2,2) doesnt have 12.0 units (8 units left)
+No space for kale(brassica) in plot
+=> purple kale(brassica) (already 1)
+box(1,1) doesnt have 12.0 units (3 units left)
+box(2,1) doesnt have 12.0 units (2 units left)
+box(1,2) doesnt have 12.0 units (8 units left)
+box(2,2) doesnt have 12.0 units (8 units left)
+No space for purple kale(brassica) in plot
+=> cucumber-short(cucurbita) (already 1)
+box(1,1) doesnt have 4.0 units (3 units left)
+box(2,1) doesnt have 4.0 units (2 units left)
+box(1,2): fill 1 x cucumber-short(cucurbita)
+=> squash(cucurbita) (already 0)
+box(1,1) doesnt have 4.0 units (3 units left)
+box(2,1) doesnt have 4.0 units (2 units left)
+box(1,2): fill 0 x squash(cucurbita)
+=> cabbage(brassica) (already 1)
+box(1,1) doesnt have 12.0 units (3 units left)
+box(2,1) doesnt have 12.0 units (2 units left)
+box(1,2) doesnt have 12.0 units (3 units left)
+box(2,2) doesnt have 12.0 units (8 units left)
+No space for cabbage(brassica) in plot
+=> bean bush(legumino) (already 6)
+box(1,1): fill 3 x bean bush(legumino)
+=> cucumber-trellis(cucurbita) (already 2)
+box(1,1) is full
+box(2,1) doesnt have 6.0 units (2 units left)
+box(1,2) doesnt have 6.0 units (3 units left)
+box(2,2): fill 1 x cucumber-trellis(cucurbita)
+=> kale(brassica) (already 1)
+box(1,1) is full
+box(2,1) doesnt have 12.0 units (2 units left)
+box(1,2) doesnt have 12.0 units (3 units left)
+box(2,2) doesnt have 12.0 units (2 units left)
+No space for kale(brassica) in plot
+=> purple kale(brassica) (already 1)
+box(1,1) is full
+box(2,1) doesnt have 12.0 units (2 units left)
+box(1,2) doesnt have 12.0 units (3 units left)
+box(2,2) doesnt have 12.0 units (2 units left)
+No space for purple kale(brassica) in plot
+=> cucumber-short(cucurbita) (already 2)
+box(1,1) is full
+box(2,1) doesnt have 4.0 units (2 units left)
+box(1,2) doesnt have 4.0 units (3 units left)
+box(2,2) doesnt have 4.0 units (2 units left)
+No space for cucumber-short(cucurbita) in plot
+=> squash(cucurbita) (already 0)
+box(1,1) is full
+box(2,1) doesnt have 4.0 units (2 units left)
+box(1,2) doesnt have 4.0 units (3 units left)
+box(2,2) doesnt have 4.0 units (2 units left)
+No space for squash(cucurbita) in plot
+=> cabbage(brassica) (already 1)
+box(1,1) is full
+box(2,1) doesnt have 12.0 units (2 units left)
+box(1,2) doesnt have 12.0 units (3 units left)
+box(2,2) doesnt have 12.0 units (2 units left)
+No space for cabbage(brassica) in plot
+=> bean bush(legumino) (already 9)
+box(1,1) is full
+box(2,1): fill 2 x bean bush(legumino)
+=> cucumber-trellis(cucurbita) (already 3)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 6.0 units (3 units left)
+box(2,2) doesnt have 6.0 units (2 units left)
+No space for cucumber-trellis(cucurbita) in plot
+=> kale(brassica) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 12.0 units (3 units left)
+box(2,2) doesnt have 12.0 units (2 units left)
+No space for kale(brassica) in plot
+=> purple kale(brassica) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 12.0 units (3 units left)
+box(2,2) doesnt have 12.0 units (2 units left)
+No space for purple kale(brassica) in plot
+=> cucumber-short(cucurbita) (already 2)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 4.0 units (3 units left)
+box(2,2) doesnt have 4.0 units (2 units left)
+No space for cucumber-short(cucurbita) in plot
+=> squash(cucurbita) (already 0)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 4.0 units (3 units left)
+box(2,2) doesnt have 4.0 units (2 units left)
+No space for squash(cucurbita) in plot
+=> cabbage(brassica) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 12.0 units (3 units left)
+box(2,2) doesnt have 12.0 units (2 units left)
+No space for cabbage(brassica) in plot
+=> bean bush(legumino) (already 11)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x bean bush(legumino)
+=> cucumber-trellis(cucurbita) (already 3)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2) doesnt have 6.0 units (2 units left)
+No space for cucumber-trellis(cucurbita) in plot
+=> kale(brassica) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2) doesnt have 12.0 units (2 units left)
+No space for kale(brassica) in plot
+=> purple kale(brassica) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2) doesnt have 12.0 units (2 units left)
+No space for purple kale(brassica) in plot
+=> cucumber-short(cucurbita) (already 2)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2) doesnt have 4.0 units (2 units left)
+No space for cucumber-short(cucurbita) in plot
+=> squash(cucurbita) (already 0)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2) doesnt have 4.0 units (2 units left)
+No space for squash(cucurbita) in plot
+=> cabbage(brassica) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2) doesnt have 12.0 units (2 units left)
+No space for cabbage(brassica) in plot
+=> bean bush(legumino) (already 14)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 2 x bean bush(legumino)
+plot-1 is full
+------
+pool: ["legumino", "brassica", "cucurbita"]
+pool: cucumber-trellis,kale,purple kale,cucumber-short,squash,cabbage,bean bush
+box(1,1):
+- 9 x bean bush(legumino)
+- 1 x cucumber-trellis(cucurbita)
+- 1 x cucumber-short(cucurbita)
+- 0 x squash(cucurbita)
+
+box(2,1):
+- 1 x kale(brassica)
+- 1 x cucumber-trellis(cucurbita)
+- 2 x bean bush(legumino)
+
+box(1,2):
+- 1 x purple kale(brassica)
+- 1 x cucumber-short(cucurbita)
+- 0 x squash(cucurbita)
+- 3 x bean bush(legumino)
+
+box(2,2):
+- 1 x cabbage(brassica)
+- 1 x cucumber-trellis(cucurbita)
+- 2 x bean bush(legumino)
+
+plot-1 (60x60) has:
+- 16 x bean bush
+- 3 x cucumber-trellis
+- 2 x cucumber-short
+- 0 x squash
+- 1 x kale
+- 1 x purple kale
+- 1 x cabbage
+.
+
+Finished in 0.00477 seconds (files took 0.81366 seconds to load)
+1 example, 0 failures
+

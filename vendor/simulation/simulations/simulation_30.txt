@@ -1,0 +1,135 @@
+Run options: include {:locations=>{"./spec/plot_spec.rb"=>[169]}}
+PLOT===plot-1
+=> bean bush(legumino) (already 0)
+box(1,1): fill 3 x bean bush(legumino)
+=> okra(malva) (already 0)
+box(1,1): fill 1 x okra(malva)
+=> parsley(apia) (already 0)
+box(1,1): fill 1 x parsley(apia)
+=> celery(apia) (already 0)
+box(1,1): fill 1 x celery(apia)
+=> carrot(apia) (already 0)
+box(1,1): fill 3 x carrot(apia)
+=> bean bush(legumino) (already 3)
+box(1,1): fill 2 x bean bush(legumino)
+=> okra(malva) (already 1)
+box(1,1) is full
+box(2,1): fill 1 x okra(malva)
+=> parsley(apia) (already 1)
+box(1,1) is full
+box(2,1): fill 1 x parsley(apia)
+=> celery(apia) (already 1)
+box(1,1) is full
+box(2,1): fill 1 x celery(apia)
+=> carrot(apia) (already 3)
+box(1,1) is full
+box(2,1): fill 3 x carrot(apia)
+=> bean bush(legumino) (already 5)
+box(1,1) is full
+box(2,1): fill 3 x bean bush(legumino)
+=> okra(malva) (already 2)
+box(1,1) is full
+box(2,1) doesnt have 4.0 units (2 units left)
+box(1,2): fill 1 x okra(malva)
+=> parsley(apia) (already 2)
+box(1,1) is full
+box(2,1) doesnt have 4.0 units (2 units left)
+box(1,2): fill 1 x parsley(apia)
+=> celery(apia) (already 2)
+box(1,1) is full
+box(2,1) doesnt have 4.0 units (2 units left)
+box(1,2): fill 1 x celery(apia)
+=> carrot(apia) (already 6)
+box(1,1) is full
+box(2,1): fill 2 x carrot(apia)
+=> bean bush(legumino) (already 8)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x bean bush(legumino)
+=> okra(malva) (already 3)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 1 x okra(malva)
+=> parsley(apia) (already 3)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 4.0 units (1 units left)
+box(2,2): fill 1 x parsley(apia)
+=> celery(apia) (already 3)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 4.0 units (1 units left)
+box(2,2): fill 1 x celery(apia)
+=> carrot(apia) (already 8)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 1 x carrot(apia)
+=> bean bush(legumino) (already 11)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 3 x bean bush(legumino)
+=> okra(malva) (already 4)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 1 x okra(malva)
+=> parsley(apia) (already 4)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 1 x parsley(apia)
+=> celery(apia) (already 4)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2) doesnt have 4.0 units (1 units left)
+No space for celery(apia) in plot
+=> carrot(apia) (already 9)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 1 x carrot(apia)
+plot-1 is full
+------
+pool: ["legumino", "apia", "malva"]
+pool: bean bush,okra,parsley,celery,carrot
+box(1,1):
+- 5 x bean bush(legumino)
+- 1 x okra(malva)
+- 1 x parsley(apia)
+- 1 x celery(apia)
+- 3 x carrot(apia)
+
+box(2,1):
+- 1 x okra(malva)
+- 1 x parsley(apia)
+- 1 x celery(apia)
+- 5 x carrot(apia)
+- 3 x bean bush(legumino)
+
+box(1,2):
+- 2 x okra(malva)
+- 1 x parsley(apia)
+- 1 x celery(apia)
+- 3 x bean bush(legumino)
+- 1 x carrot(apia)
+
+box(2,2):
+- 2 x parsley(apia)
+- 1 x celery(apia)
+- 3 x bean bush(legumino)
+- 1 x okra(malva)
+- 1 x carrot(apia)
+
+plot-1 (60x60) has:
+- 14 x bean bush
+- 5 x okra
+- 5 x parsley
+- 4 x celery
+- 10 x carrot
+.
+
+Finished in 0.00278 seconds (files took 0.8069 seconds to load)
+1 example, 0 failures
+

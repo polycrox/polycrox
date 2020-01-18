@@ -1,0 +1,146 @@
+Run options: include {:locations=>{"./spec/plot_spec.rb"=>[169]}}
+PLOT===plot-1
+=> bean bush(legumino) (already 0)
+box(1,1): fill 3 x bean bush(legumino)
+=> swiss chard(chenopo) (already 0)
+box(1,1): fill 1 x swiss chard(chenopo)
+=> onion(allium) (already 0)
+box(1,1) has an enemy to onion(allium)
+box(2,1): fill 3 x onion(allium)
+=> spring onion(allium) (already 0)
+box(1,1): fill 3 x spring onion(allium)
+=> beetroot(chenopo) (already 0)
+box(1,1): fill 3 x beetroot(chenopo)
+=> spinach(chenopo) (already 0)
+box(1,1): fill 3 x spinach(chenopo)
+=> bean bush(legumino) (already 3)
+box(1,1): fill 3 x bean bush(legumino)
+=> swiss chard(chenopo) (already 1)
+box(1,1) doesnt have 4.0 units (1 units left)
+box(2,1): fill 1 x swiss chard(chenopo)
+=> onion(allium) (already 3)
+box(1,1) has an enemy to onion(allium)
+box(2,1): fill 3 x onion(allium)
+=> spring onion(allium) (already 3)
+box(1,1): fill 1 x spring onion(allium)
+=> beetroot(chenopo) (already 3)
+box(1,1) is full
+box(2,1): fill 3 x beetroot(chenopo)
+=> spinach(chenopo) (already 3)
+box(1,1) is full
+box(2,1): fill 3 x spinach(chenopo)
+=> bean bush(legumino) (already 6)
+box(1,1) is full
+box(2,1) has an enemy to bean bush(legumino)
+box(1,2): fill 3 x bean bush(legumino)
+=> swiss chard(chenopo) (already 2)
+box(1,1) is full
+box(2,1): fill 1 x swiss chard(chenopo)
+=> onion(allium) (already 6)
+box(1,1) is full
+box(2,1) is full
+box(1,2) has an enemy to onion(allium)
+box(2,2): fill 3 x onion(allium)
+=> spring onion(allium) (already 4)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x spring onion(allium)
+=> beetroot(chenopo) (already 6)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x beetroot(chenopo)
+=> spinach(chenopo) (already 6)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x spinach(chenopo)
+=> bean bush(legumino) (already 9)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x bean bush(legumino)
+=> swiss chard(chenopo) (already 3)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 1 x swiss chard(chenopo)
+=> onion(allium) (already 9)
+box(1,1) is full
+box(2,1) is full
+box(1,2) has an enemy to onion(allium)
+box(2,2): fill 3 x onion(allium)
+=> spring onion(allium) (already 7)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 1 x spring onion(allium)
+=> beetroot(chenopo) (already 9)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 3 x beetroot(chenopo)
+=> spinach(chenopo) (already 9)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 3 x spinach(chenopo)
+=> bean bush(legumino) (already 12)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2) has an enemy to bean bush(legumino)
+No space for bean bush(legumino) in plot
+=> swiss chard(chenopo) (already 4)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 1 x swiss chard(chenopo)
+=> onion(allium) (already 12)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 3 x onion(allium)
+=> spring onion(allium) (already 8)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 1 x spring onion(allium)
+plot-1 is full
+------
+pool: ["chenopo", "legumino", "allium"]
+pool: beetroot,spinach,bean bush,swiss chard,onion,spring onion
+box(1,1):
+- 6 x bean bush(legumino)
+- 1 x swiss chard(chenopo)
+- 4 x spring onion(allium)
+- 3 x beetroot(chenopo)
+- 3 x spinach(chenopo)
+
+box(2,1):
+- 6 x onion(allium)
+- 2 x swiss chard(chenopo)
+- 3 x beetroot(chenopo)
+- 3 x spinach(chenopo)
+
+box(1,2):
+- 6 x bean bush(legumino)
+- 4 x spring onion(allium)
+- 3 x beetroot(chenopo)
+- 3 x spinach(chenopo)
+- 1 x swiss chard(chenopo)
+
+box(2,2):
+- 9 x onion(allium)
+- 3 x beetroot(chenopo)
+- 3 x spinach(chenopo)
+- 1 x swiss chard(chenopo)
+- 1 x spring onion(allium)
+
+plot-1 (60x60) has:
+- 12 x bean bush
+- 5 x swiss chard
+- 9 x spring onion
+- 12 x beetroot
+- 12 x spinach
+- 15 x onion
+.
+
+Finished in 0.0032 seconds (files took 0.88351 seconds to load)
+1 example, 0 failures
+

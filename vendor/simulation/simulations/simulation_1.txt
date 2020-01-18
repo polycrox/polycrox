@@ -1,0 +1,135 @@
+Run options: include {:locations=>{"./spec/plot_spec.rb"=>[169]}}
+PLOT===plot-1
+=> bean bush(legumino) (already 0)
+box(1,1): fill 3 x bean bush(legumino)
+=> onion(allium) (already 0)
+box(1,1) has an enemy to onion(allium)
+box(2,1): fill 3 x onion(allium)
+=> okra(malva) (already 0)
+box(1,1): fill 1 x okra(malva)
+=> spring onion(allium) (already 0)
+box(1,1): fill 3 x spring onion(allium)
+=> bean bush(legumino) (already 3)
+box(1,1): fill 3 x bean bush(legumino)
+=> onion(allium) (already 3)
+box(1,1) has an enemy to onion(allium)
+box(2,1): fill 3 x onion(allium)
+=> okra(malva) (already 1)
+box(1,1): fill 1 x okra(malva)
+=> spring onion(allium) (already 3)
+box(1,1): fill 3 x spring onion(allium)
+=> bean bush(legumino) (already 6)
+box(1,1) is full
+box(2,1) has an enemy to bean bush(legumino)
+box(1,2): fill 3 x bean bush(legumino)
+=> onion(allium) (already 6)
+box(1,1) is full
+box(2,1): fill 3 x onion(allium)
+=> okra(malva) (already 2)
+box(1,1) is full
+box(2,1): fill 1 x okra(malva)
+=> spring onion(allium) (already 6)
+box(1,1) is full
+box(2,1): fill 3 x spring onion(allium)
+=> bean bush(legumino) (already 9)
+box(1,1) is full
+box(2,1) has an enemy to bean bush(legumino)
+box(1,2): fill 3 x bean bush(legumino)
+=> onion(allium) (already 9)
+box(1,1) is full
+box(2,1): fill 3 x onion(allium)
+=> okra(malva) (already 3)
+box(1,1) is full
+box(2,1) doesnt have 4.0 units (1 units left)
+box(1,2): fill 1 x okra(malva)
+=> spring onion(allium) (already 9)
+box(1,1) is full
+box(2,1): fill 1 x spring onion(allium)
+=> bean bush(legumino) (already 12)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x bean bush(legumino)
+=> onion(allium) (already 12)
+box(1,1) is full
+box(2,1) is full
+box(1,2) has an enemy to onion(allium)
+box(2,2): fill 3 x onion(allium)
+=> okra(malva) (already 4)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 1 x okra(malva)
+=> spring onion(allium) (already 10)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x spring onion(allium)
+=> bean bush(legumino) (already 15)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2) has an enemy to bean bush(legumino)
+No space for bean bush(legumino) in plot
+=> onion(allium) (already 15)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 3 x onion(allium)
+=> okra(malva) (already 5)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 1 x okra(malva)
+=> spring onion(allium) (already 13)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 3 x spring onion(allium)
+=> bean bush(legumino) (already 15)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2) has an enemy to bean bush(legumino)
+No space for bean bush(legumino) in plot
+=> onion(allium) (already 18)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 3 x onion(allium)
+=> okra(malva) (already 6)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 1 x okra(malva)
+plot-1 is full
+------
+pool: ["malva", "allium", "legumino"]
+pool: spring onion,bean bush,onion,okra
+box(1,1):
+- 6 x bean bush(legumino)
+- 2 x okra(malva)
+- 6 x spring onion(allium)
+
+box(2,1):
+- 12 x onion(allium)
+- 1 x okra(malva)
+- 4 x spring onion(allium)
+
+box(1,2):
+- 9 x bean bush(legumino)
+- 2 x okra(malva)
+- 3 x spring onion(allium)
+
+box(2,2):
+- 9 x onion(allium)
+- 2 x okra(malva)
+- 3 x spring onion(allium)
+
+plot-1 (60x60) has:
+- 15 x bean bush
+- 7 x okra
+- 16 x spring onion
+- 21 x onion
+.
+
+Finished in 0.00276 seconds (files took 0.91093 seconds to load)
+1 example, 0 failures
+

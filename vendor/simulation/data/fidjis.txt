@@ -1,0 +1,45 @@
+# i dont like this file
+# it isnt easy to edit
+# vegetable;
+# family;
+# height(cm);
+# number of boxes to grow: min_box
+# max units per box: max_units
+# min units per box: min_units
+# cost in units: cost_units
+# find_conditions; default to find_box
+# friends;
+# enemies;
+#
+tomato;solana;100;4;0.25;0.25;4;4-edge,2-edge-plot;bean,basil,carrot;brassica,potato;
+cabbage;brassica;20;1;1;1;12;;;
+purple cabbage;brassica;20;1;1;1;12;;;
+carrot;apia;10;1;16;3;1;;;dill;
+#squash;cucurbita;20;4;0.25;0.25;4;4-edge;;;
+bean bush;legumino;100;1;9;3;1;;brassica,carrot,corn,cucumber,eggplant,pea,potato,swiss chard,marigold,nasturtium,oregano;chive,garlic,leek,onion;
+potato;solana;20;1;2;1;4;;bean,brassica,corn,eggplant,horseradish,marigold,pea,nasturtium,parnsip;cucumber,pumpkin,sunflower,onion,tomato,rosemary
+eggplant;solana;40;1;1;1;12;;bean bush,pepper,marigold,thyme,potato,marjoram;
+sweet pepper;solana;30;1;1;1;10;;carrot,eggplant,onion,tomato,basil;
+chili pepper;solana;20;1;2;1;8;;carrot,eggplant,onion,tomato,basil;
+swiss chard;chenopo;20;1;2;1;4;;bean,brassica,lettuce,onion,garlic;
+cucumber-short;cucurbita;20;1;2;1;4;;bean,brassica,chive,sunflower,pea,celery,corn,lettuce,tomato,marigold,parsley;
+cucumber-trellis;cucurbita;60;1;2;1;6;;bean,brassica,corn,lettuce,tomato,marigold,parsley,nasturtium;
+beetroot;chenopo;10;1;16;3;1;;bean,brassica,lettuce,onion,garlic;
+celery;apia;20;1;2;1;4;;bean,leek,onion,brassica,spinach,tomato,cosmos,daisies,snapdragons
+parsley;apia;20;1;2;1;4;;chive,carrot,corn,chili pepper,sweet pepper,onion,pea,rose;mint,lettuce
+kale;brassica;30;1;1;1;12;;artichoke,beetroot,celery,cucumber,lettuce,onion,pea,potato,radish,spinach,garlic,basil,dill,chamonille,mint,rosemary,sage,thyme,hyssop,marigold,nasturtium,bittercress,catnip,mustard;tomato,grape,rue
+purple kale;brassica;30;1;1;1;12;;artichoke,beetroot,celery,cucumber,lettuce,onion,pea,potato,radish,spinach,garlic,basil,dill,chamonille,mint,rosemary,sage,thyme,hyssop,marigold,nasturtium,bittercress,catnip,mustard;tomato,grape,rue;
+spring onion;allium;15;1;16;3;1;;
+onion;allium;20;1;16;3;1;;
+chive;allium;20;1;16;3;1;;
+mint;herbs;30;1;1;1;10;;
+rosemary;herbs;30;1;1;1;10;;
+basil;misc;30;1;2;1;4;;
+lettuce;misc;10;1;4;1;3;;
+purple lettuce;misc;10;1;4;1;3;;
+okra;malva;20;1;2;1;4;;
+spinach;chenopo;10;1;9;3;1;
+dill;herbs;30;1;4;1;10;;
+leek;allium;20;1;1;1;1;;friends;enemies
+maize;legumino;20;1;1;1;1;;friends;enemies
+pumpkin;cucurbita;20;1;1;1;1;;friends;enemies

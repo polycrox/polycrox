@@ -1,0 +1,130 @@
+Run options: include {:locations=>{"./spec/plot_spec.rb"=>[169]}}
+PLOT===plot-1
+=> bean bush(legumino) (already 0)
+box(1,1): fill 3 x bean bush(legumino)
+=> cucumber-trellis(cucurbita) (already 0)
+box(1,1): fill 1 x cucumber-trellis(cucurbita)
+=> squash(cucurbita) (already 0)
+box(1,1): fill 0 x squash(cucurbita)
+=> cucumber-short(cucurbita) (already 0)
+box(1,1): fill 1 x cucumber-short(cucurbita)
+=> onion(allium) (already 0)
+box(1,1) has an enemy to onion(allium)
+box(2,1): fill 3 x onion(allium)
+=> spring onion(allium) (already 0)
+box(1,1): fill 3 x spring onion(allium)
+=> bean bush(legumino) (already 3)
+box(1,1): fill 3 x bean bush(legumino)
+=> cucumber-trellis(cucurbita) (already 1)
+box(1,1) is full
+box(2,1): fill 1 x cucumber-trellis(cucurbita)
+=> squash(cucurbita) (already 0)
+box(1,1) is full
+box(2,1): fill 0 x squash(cucurbita)
+=> cucumber-short(cucurbita) (already 1)
+box(1,1) is full
+box(2,1): fill 1 x cucumber-short(cucurbita)
+=> onion(allium) (already 3)
+box(1,1) is full
+box(2,1): fill 3 x onion(allium)
+=> spring onion(allium) (already 3)
+box(1,1) is full
+box(2,1): fill 3 x spring onion(allium)
+=> bean bush(legumino) (already 6)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x bean bush(legumino)
+=> cucumber-trellis(cucurbita) (already 2)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 1 x cucumber-trellis(cucurbita)
+=> squash(cucurbita) (already 0)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 0 x squash(cucurbita)
+=> cucumber-short(cucurbita) (already 2)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 1 x cucumber-short(cucurbita)
+=> onion(allium) (already 6)
+box(1,1) is full
+box(2,1) is full
+box(1,2) has an enemy to onion(allium)
+box(2,2): fill 3 x onion(allium)
+=> spring onion(allium) (already 6)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x spring onion(allium)
+=> bean bush(legumino) (already 9)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x bean bush(legumino)
+=> cucumber-trellis(cucurbita) (already 3)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 1 x cucumber-trellis(cucurbita)
+=> squash(cucurbita) (already 0)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 0 x squash(cucurbita)
+=> cucumber-short(cucurbita) (already 3)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 1 x cucumber-short(cucurbita)
+=> onion(allium) (already 9)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 3 x onion(allium)
+=> spring onion(allium) (already 9)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 3 x spring onion(allium)
+plot-1 is full
+------
+pool: ["legumino", "cucurbita", "allium"]
+pool: bean bush,cucumber-trellis,squash,cucumber-short,onion,spring onion
+box(1,1):
+- 6 x bean bush(legumino)
+- 1 x cucumber-trellis(cucurbita)
+- 0 x squash(cucurbita)
+- 1 x cucumber-short(cucurbita)
+- 3 x spring onion(allium)
+
+box(2,1):
+- 6 x onion(allium)
+- 1 x cucumber-trellis(cucurbita)
+- 0 x squash(cucurbita)
+- 1 x cucumber-short(cucurbita)
+- 3 x spring onion(allium)
+
+box(1,2):
+- 6 x bean bush(legumino)
+- 1 x cucumber-trellis(cucurbita)
+- 0 x squash(cucurbita)
+- 1 x cucumber-short(cucurbita)
+- 3 x spring onion(allium)
+
+box(2,2):
+- 6 x onion(allium)
+- 1 x cucumber-trellis(cucurbita)
+- 0 x squash(cucurbita)
+- 1 x cucumber-short(cucurbita)
+- 3 x spring onion(allium)
+
+plot-1 (60x60) has:
+- 12 x bean bush
+- 4 x cucumber-trellis
+- 0 x squash
+- 4 x cucumber-short
+- 12 x spring onion
+- 12 x onion
+.
+
+Finished in 0.00266 seconds (files took 0.84786 seconds to load)
+1 example, 0 failures
+

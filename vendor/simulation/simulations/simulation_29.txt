@@ -1,0 +1,129 @@
+Run options: include {:locations=>{"./spec/plot_spec.rb"=>[169]}}
+PLOT===plot-1
+=> bean bush(legumino) (already 0)
+box(1,1): fill 3 x bean bush(legumino)
+=> kale(brassica) (already 0)
+box(1,1): fill 1 x kale(brassica)
+=> purple kale(brassica) (already 0)
+box(1,1) doesnt have 12.0 units (5 units left)
+box(2,1): fill 1 x purple kale(brassica)
+=> swiss chard(chenopo) (already 0)
+box(1,1): fill 1 x swiss chard(chenopo)
+=> cabbage(brassica) (already 0)
+box(1,1) doesnt have 12.0 units (1 units left)
+box(2,1) doesnt have 12.0 units (8 units left)
+box(1,2): fill 1 x cabbage(brassica)
+=> beetroot(chenopo) (already 0)
+box(1,1): fill 1 x beetroot(chenopo)
+=> spinach(chenopo) (already 0)
+box(1,1) is full
+box(2,1): fill 3 x spinach(chenopo)
+=> bean bush(legumino) (already 3)
+box(1,1) is full
+box(2,1): fill 3 x bean bush(legumino)
+=> kale(brassica) (already 1)
+box(1,1) is full
+box(2,1) doesnt have 12.0 units (2 units left)
+box(1,2) doesnt have 12.0 units (8 units left)
+box(2,2): fill 1 x kale(brassica)
+=> purple kale(brassica) (already 1)
+box(1,1) is full
+box(2,1) doesnt have 12.0 units (2 units left)
+box(1,2) doesnt have 12.0 units (8 units left)
+box(2,2) doesnt have 12.0 units (8 units left)
+No space for purple kale(brassica) in plot
+=> swiss chard(chenopo) (already 1)
+box(1,1) is full
+box(2,1) doesnt have 4.0 units (2 units left)
+box(1,2): fill 1 x swiss chard(chenopo)
+=> cabbage(brassica) (already 1)
+box(1,1) is full
+box(2,1) doesnt have 12.0 units (2 units left)
+box(1,2) doesnt have 12.0 units (4 units left)
+box(2,2) doesnt have 12.0 units (8 units left)
+No space for cabbage(brassica) in plot
+=> beetroot(chenopo) (already 1)
+box(1,1) is full
+box(2,1): fill 2 x beetroot(chenopo)
+=> spinach(chenopo) (already 3)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x spinach(chenopo)
+=> bean bush(legumino) (already 6)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 1 x bean bush(legumino)
+=> kale(brassica) (already 2)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2) doesnt have 12.0 units (8 units left)
+No space for kale(brassica) in plot
+=> purple kale(brassica) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2) doesnt have 12.0 units (8 units left)
+No space for purple kale(brassica) in plot
+=> swiss chard(chenopo) (already 2)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 1 x swiss chard(chenopo)
+=> cabbage(brassica) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2) doesnt have 12.0 units (4 units left)
+No space for cabbage(brassica) in plot
+=> beetroot(chenopo) (already 3)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 3 x beetroot(chenopo)
+=> spinach(chenopo) (already 6)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 1 x spinach(chenopo)
+plot-1 is full
+------
+pool: ["legumino", "brassica", "chenopo"]
+pool: bean bush,kale,purple kale,swiss chard,cabbage,beetroot,spinach
+box(1,1):
+- 3 x bean bush(legumino)
+- 1 x kale(brassica)
+- 1 x swiss chard(chenopo)
+- 1 x beetroot(chenopo)
+
+box(2,1):
+- 1 x purple kale(brassica)
+- 3 x spinach(chenopo)
+- 3 x bean bush(legumino)
+- 2 x beetroot(chenopo)
+
+box(1,2):
+- 1 x cabbage(brassica)
+- 1 x swiss chard(chenopo)
+- 3 x spinach(chenopo)
+- 1 x bean bush(legumino)
+
+box(2,2):
+- 1 x kale(brassica)
+- 1 x swiss chard(chenopo)
+- 3 x beetroot(chenopo)
+- 1 x spinach(chenopo)
+
+plot-1 (60x60) has:
+- 7 x bean bush
+- 2 x kale
+- 3 x swiss chard
+- 6 x beetroot
+- 1 x purple kale
+- 7 x spinach
+- 1 x cabbage
+.
+
+Finished in 0.00281 seconds (files took 0.81976 seconds to load)
+1 example, 0 failures
+

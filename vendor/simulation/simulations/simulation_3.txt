@@ -1,0 +1,104 @@
+Run options: include {:locations=>{"./spec/plot_spec.rb"=>[169]}}
+PLOT===plot-1
+=> kale(brassica) (already 0)
+box(1,1): fill 1 x kale(brassica)
+=> purple kale(brassica) (already 0)
+box(1,1) doesnt have 12.0 units (8 units left)
+box(2,1): fill 1 x purple kale(brassica)
+=> cabbage(brassica) (already 0)
+box(1,1) doesnt have 12.0 units (8 units left)
+box(2,1) doesnt have 12.0 units (8 units left)
+box(1,2): fill 1 x cabbage(brassica)
+=> parsley(apia) (already 0)
+box(1,1): fill 1 x parsley(apia)
+=> celery(apia) (already 0)
+box(1,1): fill 1 x celery(apia)
+=> onion(allium) (already 0)
+box(1,1) is full
+box(2,1): fill 3 x onion(allium)
+=> spring onion(allium) (already 0)
+box(1,1) is full
+box(2,1): fill 3 x spring onion(allium)
+=> carrot(apia) (already 0)
+box(1,1) is full
+box(2,1): fill 2 x carrot(apia)
+=> kale(brassica) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 12.0 units (8 units left)
+box(2,2): fill 1 x kale(brassica)
+=> purple kale(brassica) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 12.0 units (8 units left)
+box(2,2) doesnt have 12.0 units (8 units left)
+No space for purple kale(brassica) in plot
+=> cabbage(brassica) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 12.0 units (8 units left)
+box(2,2) doesnt have 12.0 units (8 units left)
+No space for cabbage(brassica) in plot
+=> parsley(apia) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 1 x parsley(apia)
+=> celery(apia) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 1 x celery(apia)
+=> onion(allium) (already 3)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 3 x onion(allium)
+=> spring onion(allium) (already 3)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 3 x spring onion(allium)
+=> carrot(apia) (already 2)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 2 x carrot(apia)
+plot-1 is full
+------
+pool: ["apia", "allium", "brassica"]
+pool: kale,purple kale,cabbage,parsley,celery,onion,spring onion,carrot
+box(1,1):
+- 1 x kale(brassica)
+- 1 x parsley(apia)
+- 1 x celery(apia)
+
+box(2,1):
+- 1 x purple kale(brassica)
+- 3 x onion(allium)
+- 3 x spring onion(allium)
+- 2 x carrot(apia)
+
+box(1,2):
+- 1 x cabbage(brassica)
+- 1 x parsley(apia)
+- 1 x celery(apia)
+
+box(2,2):
+- 1 x kale(brassica)
+- 3 x onion(allium)
+- 3 x spring onion(allium)
+- 2 x carrot(apia)
+
+plot-1 (60x60) has:
+- 2 x kale
+- 2 x parsley
+- 2 x celery
+- 1 x purple kale
+- 6 x onion
+- 6 x spring onion
+- 4 x carrot
+- 1 x cabbage
+.
+
+Finished in 0.00287 seconds (files took 0.8041 seconds to load)
+1 example, 0 failures
+

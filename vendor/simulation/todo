@@ -1,0 +1,153 @@
+
+
+polyculture
+crop rotation
+square foot box
+
+=> Polycrox
+
+
+brute force => bah ouais maggle
+# a fidji is a vegetable.
+
+input: bed(nursery-1), fidjis
+
+(define (bed )
+
+(define count-boxes (count (boxes(bed))))
+
+
+
+definir des preferences de rendements
+ex: pizza plot
+avoir des zones pour experiences: mixer les 8 familles
+
+prepare the next season:
+for bed in beds
+
+# get 2 VEGETABLE_FAMILIES + 1 MORE_VEGETABLE_FAMILY
+
+
+----
+There is only one Garden
+A Plot belongs to a Garden
+There are many Plots
+
+lets say our garden has one plot
+the plot's dimensions are 60x60
+so there are 4 boxes in the plot.
+;;garden.txt
+plot;60x60
+
+- 2017-summer
+
+we want to know what can we plant for:
+- 2018-winter
+- 2018-summer
+- 2019-winter
+- 2019-summer
+
+INPUT: 
+- garden.txt (map of the garden), 
+- seasons
+
+ruby tool.rb --garden garden.txt --next-season 2018-winter 
+# --current-season 2017-summer 
+
+OUTPUT:
+- a text file for each season
+
+2018-winter.txt
+plot;60x60
+BOX_1;BOX_2
+BOX_3;BOX_4
+
+plot = [box_1, box_2, box_3, box_4]
+plot.draw
+class Plot
+  attr_accessor :boxes
+
+  def draw
+    @boxes.each {|box| box.draw}
+  end
+end
+
+class Box
+  def draw
+
+  end
+end
+
+Carrot;0.0625;4x4
++-----------+
+|  * * * *  |
+|  * * * *  |
+|           |
+|  * * * *  |
+|  * * * *  |
++-----------+
+box = [Carrot, Carrot, Carrot, Carrot,]
+
+Cabbage;1;center
++-----------+
+|           |
+|           |
+|     *     |
+|           |
+|           |
++-----------+
+
+Swiss Chard;0.5;center-horizontal
++-----------+
+|           |
+|           |
+|   *   *   |
+|           |
+|           |
++-----------+
+
+Cabbage (x1) is Friend with Swiss Chard (x2)
++-----------+
+|     S     |
+|           |
+|     C     |
+|           |
+|     S     |
++-----------+
+
+
+
+fuck thats fucking intense
+=> fuck yeah
+
+pool: ["allium", "malva", "solana"]
+pool: chili,potato,okra,onion,spring onion,tomato,eggplant,pepper
+box(1,1):
+- eggplant 1
+- onion 3
+total: 15
+=> on peut rajouter un onion
+=> units = box.units_left
+=> box.fill_with(fidji, units)
+
+box(2,1):
+- pepper 1
+- potato 1
+- spring onion 3
+total: 17
+=> Nickel
+
+box(1,2):
+- chili 1
+- okra 1
+total: 12
+=> on peut rajouter 4 onions
+=> pourquoi l'onion n'est pas repassé dessus?
+=> le break de mon while doit chier du cul
+
+box(2,2):
+- eggplant 1
+total: 12
+=> idem, 4 onions
+
+

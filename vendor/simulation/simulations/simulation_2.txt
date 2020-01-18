@@ -1,0 +1,134 @@
+Run options: include {:locations=>{"./spec/plot_spec.rb"=>[169]}}
+PLOT===plot-1
+=> swiss chard(chenopo) (already 0)
+box(1,1): fill 1 x swiss chard(chenopo)
+=> okra(malva) (already 0)
+box(1,1): fill 1 x okra(malva)
+=> onion(allium) (already 0)
+box(1,1): fill 3 x onion(allium)
+=> spring onion(allium) (already 0)
+box(1,1): fill 3 x spring onion(allium)
+=> beetroot(chenopo) (already 0)
+box(1,1): fill 3 x beetroot(chenopo)
+=> spinach(chenopo) (already 0)
+box(1,1): fill 3 x spinach(chenopo)
+=> swiss chard(chenopo) (already 1)
+box(1,1) is full
+box(2,1): fill 1 x swiss chard(chenopo)
+=> okra(malva) (already 1)
+box(1,1) is full
+box(2,1): fill 1 x okra(malva)
+=> onion(allium) (already 3)
+box(1,1) is full
+box(2,1): fill 3 x onion(allium)
+=> spring onion(allium) (already 3)
+box(1,1) is full
+box(2,1): fill 3 x spring onion(allium)
+=> beetroot(chenopo) (already 3)
+box(1,1) is full
+box(2,1): fill 3 x beetroot(chenopo)
+=> spinach(chenopo) (already 3)
+box(1,1) is full
+box(2,1): fill 3 x spinach(chenopo)
+=> swiss chard(chenopo) (already 2)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 1 x swiss chard(chenopo)
+=> okra(malva) (already 2)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 1 x okra(malva)
+=> onion(allium) (already 6)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x onion(allium)
+=> spring onion(allium) (already 6)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x spring onion(allium)
+=> beetroot(chenopo) (already 6)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x beetroot(chenopo)
+=> spinach(chenopo) (already 6)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x spinach(chenopo)
+=> swiss chard(chenopo) (already 3)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 1 x swiss chard(chenopo)
+=> okra(malva) (already 3)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 1 x okra(malva)
+=> onion(allium) (already 9)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 3 x onion(allium)
+=> spring onion(allium) (already 9)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 3 x spring onion(allium)
+=> beetroot(chenopo) (already 9)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 3 x beetroot(chenopo)
+=> spinach(chenopo) (already 9)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 3 x spinach(chenopo)
+plot-1 is full
+------
+pool: ["allium", "malva", "chenopo"]
+pool: swiss chard,okra,onion,spring onion,beetroot,spinach
+box(1,1):
+- 1 x swiss chard(chenopo)
+- 1 x okra(malva)
+- 3 x onion(allium)
+- 3 x spring onion(allium)
+- 3 x beetroot(chenopo)
+- 3 x spinach(chenopo)
+
+box(2,1):
+- 1 x swiss chard(chenopo)
+- 1 x okra(malva)
+- 3 x onion(allium)
+- 3 x spring onion(allium)
+- 3 x beetroot(chenopo)
+- 3 x spinach(chenopo)
+
+box(1,2):
+- 1 x swiss chard(chenopo)
+- 1 x okra(malva)
+- 3 x onion(allium)
+- 3 x spring onion(allium)
+- 3 x beetroot(chenopo)
+- 3 x spinach(chenopo)
+
+box(2,2):
+- 1 x swiss chard(chenopo)
+- 1 x okra(malva)
+- 3 x onion(allium)
+- 3 x spring onion(allium)
+- 3 x beetroot(chenopo)
+- 3 x spinach(chenopo)
+
+plot-1 (60x60) has:
+- 4 x swiss chard
+- 4 x okra
+- 12 x onion
+- 12 x spring onion
+- 12 x beetroot
+- 12 x spinach
+.
+
+Finished in 0.00415 seconds (files took 0.80544 seconds to load)
+1 example, 0 failures
+

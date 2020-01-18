@@ -1,0 +1,130 @@
+Run options: include {:locations=>{"./spec/plot_spec.rb"=>[169]}}
+PLOT===plot-1
+=> bean bush(legumino) (already 0)
+box(1,1): fill 3 x bean bush(legumino)
+=> onion(allium) (already 0)
+box(1,1) has an enemy to onion(allium)
+box(2,1): fill 3 x onion(allium)
+=> celery(apia) (already 0)
+box(1,1): fill 1 x celery(apia)
+=> parsley(apia) (already 0)
+box(1,1): fill 1 x parsley(apia)
+=> spring onion(allium) (already 0)
+box(1,1): fill 3 x spring onion(allium)
+=> carrot(apia) (already 0)
+box(1,1): fill 3 x carrot(apia)
+=> bean bush(legumino) (already 3)
+box(1,1): fill 3 x bean bush(legumino)
+=> onion(allium) (already 3)
+box(1,1) is full
+box(2,1): fill 3 x onion(allium)
+=> celery(apia) (already 1)
+box(1,1) is full
+box(2,1): fill 1 x celery(apia)
+=> parsley(apia) (already 1)
+box(1,1) is full
+box(2,1): fill 1 x parsley(apia)
+=> spring onion(allium) (already 3)
+box(1,1) is full
+box(2,1): fill 3 x spring onion(allium)
+=> carrot(apia) (already 3)
+box(1,1) is full
+box(2,1): fill 3 x carrot(apia)
+=> bean bush(legumino) (already 6)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x bean bush(legumino)
+=> onion(allium) (already 6)
+box(1,1) is full
+box(2,1) is full
+box(1,2) has an enemy to onion(allium)
+box(2,2): fill 3 x onion(allium)
+=> celery(apia) (already 2)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 1 x celery(apia)
+=> parsley(apia) (already 2)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 1 x parsley(apia)
+=> spring onion(allium) (already 6)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x spring onion(allium)
+=> carrot(apia) (already 6)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x carrot(apia)
+=> bean bush(legumino) (already 9)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x bean bush(legumino)
+=> onion(allium) (already 9)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 3 x onion(allium)
+=> celery(apia) (already 3)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 1 x celery(apia)
+=> parsley(apia) (already 3)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 1 x parsley(apia)
+=> spring onion(allium) (already 9)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 3 x spring onion(allium)
+=> carrot(apia) (already 9)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 3 x carrot(apia)
+plot-1 is full
+------
+pool: ["apia", "legumino", "allium"]
+pool: bean bush,onion,celery,parsley,spring onion,carrot
+box(1,1):
+- 6 x bean bush(legumino)
+- 1 x celery(apia)
+- 1 x parsley(apia)
+- 3 x spring onion(allium)
+- 3 x carrot(apia)
+
+box(2,1):
+- 6 x onion(allium)
+- 1 x celery(apia)
+- 1 x parsley(apia)
+- 3 x spring onion(allium)
+- 3 x carrot(apia)
+
+box(1,2):
+- 6 x bean bush(legumino)
+- 1 x celery(apia)
+- 1 x parsley(apia)
+- 3 x spring onion(allium)
+- 3 x carrot(apia)
+
+box(2,2):
+- 6 x onion(allium)
+- 1 x celery(apia)
+- 1 x parsley(apia)
+- 3 x spring onion(allium)
+- 3 x carrot(apia)
+
+plot-1 (60x60) has:
+- 12 x bean bush
+- 4 x celery
+- 4 x parsley
+- 12 x spring onion
+- 12 x carrot
+- 12 x onion
+.
+
+Finished in 0.00338 seconds (files took 0.82073 seconds to load)
+1 example, 0 failures
+

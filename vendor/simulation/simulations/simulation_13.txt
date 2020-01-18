@@ -1,0 +1,147 @@
+Run options: include {:locations=>{"./spec/plot_spec.rb"=>[169]}}
+PLOT===plot-1
+=> bean bush(legumino) (already 0)
+box(1,1): fill 3 x bean bush(legumino)
+=> swiss chard(chenopo) (already 0)
+box(1,1): fill 1 x swiss chard(chenopo)
+=> parsley(apia) (already 0)
+box(1,1): fill 1 x parsley(apia)
+=> celery(apia) (already 0)
+box(1,1): fill 1 x celery(apia)
+=> beetroot(chenopo) (already 0)
+box(1,1): fill 3 x beetroot(chenopo)
+=> carrot(apia) (already 0)
+box(1,1): fill 2 x carrot(apia)
+=> spinach(chenopo) (already 0)
+box(1,1) is full
+box(2,1): fill 3 x spinach(chenopo)
+=> bean bush(legumino) (already 3)
+box(1,1) is full
+box(2,1): fill 3 x bean bush(legumino)
+=> swiss chard(chenopo) (already 1)
+box(1,1) is full
+box(2,1): fill 1 x swiss chard(chenopo)
+=> parsley(apia) (already 1)
+box(1,1) is full
+box(2,1): fill 1 x parsley(apia)
+=> celery(apia) (already 1)
+box(1,1) is full
+box(2,1): fill 1 x celery(apia)
+=> beetroot(chenopo) (already 3)
+box(1,1) is full
+box(2,1): fill 2 x beetroot(chenopo)
+=> carrot(apia) (already 2)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x carrot(apia)
+=> spinach(chenopo) (already 3)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x spinach(chenopo)
+=> bean bush(legumino) (already 6)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x bean bush(legumino)
+=> swiss chard(chenopo) (already 2)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 1 x swiss chard(chenopo)
+=> parsley(apia) (already 2)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 1 x parsley(apia)
+=> celery(apia) (already 2)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 4.0 units (3 units left)
+box(2,2): fill 1 x celery(apia)
+=> beetroot(chenopo) (already 5)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x beetroot(chenopo)
+=> carrot(apia) (already 5)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 3 x carrot(apia)
+=> spinach(chenopo) (already 6)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 3 x spinach(chenopo)
+=> bean bush(legumino) (already 9)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 3 x bean bush(legumino)
+=> swiss chard(chenopo) (already 3)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 1 x swiss chard(chenopo)
+=> parsley(apia) (already 3)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2) doesnt have 4.0 units (3 units left)
+No space for parsley(apia) in plot
+=> celery(apia) (already 3)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2) doesnt have 4.0 units (3 units left)
+No space for celery(apia) in plot
+=> beetroot(chenopo) (already 8)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 3 x beetroot(chenopo)
+plot-1 is full
+------
+pool: ["legumino", "chenopo", "apia"]
+pool: carrot,spinach,bean bush,swiss chard,parsley,celery,beetroot
+box(1,1):
+- 3 x bean bush(legumino)
+- 1 x swiss chard(chenopo)
+- 1 x parsley(apia)
+- 1 x celery(apia)
+- 3 x beetroot(chenopo)
+- 2 x carrot(apia)
+
+box(2,1):
+- 3 x spinach(chenopo)
+- 3 x bean bush(legumino)
+- 1 x swiss chard(chenopo)
+- 1 x parsley(apia)
+- 1 x celery(apia)
+- 2 x beetroot(chenopo)
+
+box(1,2):
+- 3 x carrot(apia)
+- 3 x spinach(chenopo)
+- 3 x bean bush(legumino)
+- 1 x swiss chard(chenopo)
+- 1 x parsley(apia)
+- 3 x beetroot(chenopo)
+
+box(2,2):
+- 1 x celery(apia)
+- 3 x carrot(apia)
+- 3 x spinach(chenopo)
+- 3 x bean bush(legumino)
+- 1 x swiss chard(chenopo)
+- 3 x beetroot(chenopo)
+
+plot-1 (60x60) has:
+- 12 x bean bush
+- 4 x swiss chard
+- 3 x parsley
+- 3 x celery
+- 11 x beetroot
+- 8 x carrot
+- 9 x spinach
+.
+
+Finished in 0.00307 seconds (files took 0.87783 seconds to load)
+1 example, 0 failures
+

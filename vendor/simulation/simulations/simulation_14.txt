@@ -1,0 +1,97 @@
+Run options: include {:locations=>{"./spec/plot_spec.rb"=>[169]}}
+PLOT===plot-1
+=> tomato(solana) (already 0)
+=> eggplant(solana) (already 0)
+box(1,1): fill 1 x eggplant(solana)
+=> kale(brassica) (already 0)
+box(1,1) doesnt have 12.0 units (8 units left)
+box(2,1): fill 1 x kale(brassica)
+=> purple kale(brassica) (already 0)
+box(1,1) doesnt have 12.0 units (8 units left)
+box(2,1) doesnt have 12.0 units (8 units left)
+box(1,2): fill 1 x purple kale(brassica)
+=> pepper(solana) (already 0)
+box(1,1) doesnt have 10.0 units (8 units left)
+box(2,1) doesnt have 10.0 units (8 units left)
+box(1,2) doesnt have 10.0 units (8 units left)
+box(2,2): fill 1 x pepper(solana)
+=> chili(solana) (already 0)
+box(1,1): fill 1 x chili(solana)
+=> potato(solana) (already 0)
+box(1,1) is full
+box(2,1): fill 1 x potato(solana)
+=> cabbage(brassica) (already 0)
+box(1,1) is full
+box(2,1) doesnt have 12.0 units (4 units left)
+box(1,2) doesnt have 12.0 units (8 units left)
+box(2,2) doesnt have 12.0 units (10 units left)
+No space for cabbage(brassica) in plot
+=> onion(allium) (already 0)
+box(1,1) is full
+box(2,1): fill 3 x onion(allium)
+=> spring onion(allium) (already 0)
+box(1,1) is full
+box(2,1): fill 1 x spring onion(allium)
+=> tomato(solana) (already 0)
+=> eggplant(solana) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 12.0 units (8 units left)
+box(2,2) doesnt have 12.0 units (10 units left)
+No space for eggplant(solana) in plot
+=> kale(brassica) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 12.0 units (8 units left)
+box(2,2) doesnt have 12.0 units (10 units left)
+No space for kale(brassica) in plot
+=> purple kale(brassica) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 12.0 units (8 units left)
+box(2,2) doesnt have 12.0 units (10 units left)
+No space for purple kale(brassica) in plot
+=> pepper(solana) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 10.0 units (8 units left)
+box(2,2): fill 1 x pepper(solana)
+=> chili(solana) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 1 x chili(solana)
+plot-1 is full
+------
+pool: ["solana", "allium", "brassica"]
+pool: potato,cabbage,onion,spring onion,tomato,eggplant,kale,purple kale,pepper,chili
+box(1,1):
+- 1 x eggplant(solana)
+- 1 x chili(solana)
+
+box(2,1):
+- 1 x kale(brassica)
+- 1 x potato(solana)
+- 3 x onion(allium)
+- 1 x spring onion(allium)
+
+box(1,2):
+- 1 x purple kale(brassica)
+- 1 x chili(solana)
+
+box(2,2):
+- 2 x pepper(solana)
+
+plot-1 (60x60) has:
+- 1 x eggplant
+- 2 x chili
+- 1 x kale
+- 1 x potato
+- 3 x onion
+- 1 x spring onion
+- 1 x purple kale
+- 2 x pepper
+.
+
+Finished in 0.00993 seconds (files took 0.82263 seconds to load)
+1 example, 0 failures
+

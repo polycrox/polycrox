@@ -1,0 +1,95 @@
+Run options: include {:locations=>{"./spec/plot_spec.rb"=>[169]}}
+PLOT===plot-1
+=> tomato(solana) (already 0)
+=> eggplant(solana) (already 0)
+box(1,1): fill 1 x eggplant(solana)
+=> pepper(solana) (already 0)
+box(1,1) doesnt have 10.0 units (8 units left)
+box(2,1): fill 1 x pepper(solana)
+=> chili(solana) (already 0)
+box(1,1): fill 1 x chili(solana)
+=> potato(solana) (already 0)
+box(1,1) is full
+box(2,1): fill 1 x potato(solana)
+=> okra(malva) (already 0)
+box(1,1) is full
+box(2,1): fill 1 x okra(malva)
+=> onion(allium) (already 0)
+box(1,1) is full
+box(2,1): fill 2 x onion(allium)
+=> spring onion(allium) (already 0)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x spring onion(allium)
+=> tomato(solana) (already 0)
+=> eggplant(solana) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 1 x eggplant(solana)
+=> pepper(solana) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 10.0 units (5 units left)
+box(2,2): fill 1 x pepper(solana)
+=> chili(solana) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 8.0 units (5 units left)
+box(2,2): fill 1 x chili(solana)
+=> potato(solana) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 1 x potato(solana)
+=> okra(malva) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 4.0 units (1 units left)
+box(2,2) doesnt have 4.0 units (2 units left)
+No space for okra(malva) in plot
+=> onion(allium) (already 2)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 1 x onion(allium)
+=> spring onion(allium) (already 3)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 2 x spring onion(allium)
+plot-1 is full
+------
+pool: ["malva", "solana", "allium"]
+pool: tomato,eggplant,pepper,chili,potato,okra,onion,spring onion
+box(1,1):
+- 1 x eggplant(solana)
+- 1 x chili(solana)
+
+box(2,1):
+- 1 x pepper(solana)
+- 1 x potato(solana)
+- 1 x okra(malva)
+- 2 x onion(allium)
+
+box(1,2):
+- 3 x spring onion(allium)
+- 1 x eggplant(solana)
+- 1 x potato(solana)
+- 1 x onion(allium)
+
+box(2,2):
+- 1 x pepper(solana)
+- 1 x chili(solana)
+- 2 x spring onion(allium)
+
+plot-1 (60x60) has:
+- 2 x eggplant
+- 2 x chili
+- 2 x pepper
+- 2 x potato
+- 1 x okra
+- 3 x onion
+- 5 x spring onion
+.
+
+Finished in 0.01443 seconds (files took 0.83107 seconds to load)
+1 example, 0 failures
+

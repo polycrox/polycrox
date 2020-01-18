@@ -1,0 +1,159 @@
+Run options: include {:locations=>{"./spec/plot_spec.rb"=>[169]}}
+PLOT===plot-1
+=> bean bush(legumino) (already 0)
+box(1,1): fill 3 x bean bush(legumino)
+=> cucumber-trellis(cucurbita) (already 0)
+box(1,1): fill 1 x cucumber-trellis(cucurbita)
+=> squash(cucurbita) (already 0)
+box(1,1): fill 0 x squash(cucurbita)
+=> celery(apia) (already 0)
+box(1,1): fill 1 x celery(apia)
+=> parsley(apia) (already 0)
+box(1,1): fill 1 x parsley(apia)
+=> cucumber-short(cucurbita) (already 0)
+box(1,1) doesnt have 4.0 units (2 units left)
+box(2,1): fill 1 x cucumber-short(cucurbita)
+=> carrot(apia) (already 0)
+box(1,1): fill 2 x carrot(apia)
+=> bean bush(legumino) (already 3)
+box(1,1) is full
+box(2,1): fill 3 x bean bush(legumino)
+=> cucumber-trellis(cucurbita) (already 1)
+box(1,1) is full
+box(2,1): fill 1 x cucumber-trellis(cucurbita)
+=> squash(cucurbita) (already 0)
+box(1,1) is full
+box(2,1): fill 0 x squash(cucurbita)
+=> celery(apia) (already 1)
+box(1,1) is full
+box(2,1): fill 1 x celery(apia)
+=> parsley(apia) (already 1)
+box(1,1) is full
+box(2,1) doesnt have 4.0 units (2 units left)
+box(1,2): fill 1 x parsley(apia)
+=> cucumber-short(cucurbita) (already 1)
+box(1,1) is full
+box(2,1) doesnt have 4.0 units (2 units left)
+box(1,2): fill 1 x cucumber-short(cucurbita)
+=> carrot(apia) (already 2)
+box(1,1) is full
+box(2,1): fill 2 x carrot(apia)
+=> bean bush(legumino) (already 6)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x bean bush(legumino)
+=> cucumber-trellis(cucurbita) (already 2)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 1 x cucumber-trellis(cucurbita)
+=> squash(cucurbita) (already 0)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 4.0 units (3 units left)
+box(2,2): fill 0 x squash(cucurbita)
+=> celery(apia) (already 2)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 4.0 units (3 units left)
+box(2,2): fill 1 x celery(apia)
+=> parsley(apia) (already 2)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 4.0 units (3 units left)
+box(2,2): fill 1 x parsley(apia)
+=> cucumber-short(cucurbita) (already 2)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 4.0 units (3 units left)
+box(2,2): fill 1 x cucumber-short(cucurbita)
+=> carrot(apia) (already 4)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x carrot(apia)
+=> bean bush(legumino) (already 9)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 3 x bean bush(legumino)
+=> cucumber-trellis(cucurbita) (already 3)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2) doesnt have 6.0 units (4 units left)
+No space for cucumber-trellis(cucurbita) in plot
+=> squash(cucurbita) (already 0)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 0 x squash(cucurbita)
+=> celery(apia) (already 3)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2) doesnt have 4.0 units (3 units left)
+No space for celery(apia) in plot
+=> parsley(apia) (already 3)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2) doesnt have 4.0 units (3 units left)
+No space for parsley(apia) in plot
+=> cucumber-short(cucurbita) (already 3)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2) doesnt have 4.0 units (3 units left)
+No space for cucumber-short(cucurbita) in plot
+=> carrot(apia) (already 7)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 3 x carrot(apia)
+plot-1 is full
+------
+pool: ["cucurbita", "apia", "legumino"]
+pool: bean bush,cucumber-trellis,squash,celery,parsley,cucumber-short,carrot
+box(1,1):
+- 3 x bean bush(legumino)
+- 1 x cucumber-trellis(cucurbita)
+- 0 x squash(cucurbita)
+- 1 x celery(apia)
+- 1 x parsley(apia)
+- 2 x carrot(apia)
+
+box(2,1):
+- 1 x cucumber-short(cucurbita)
+- 3 x bean bush(legumino)
+- 1 x cucumber-trellis(cucurbita)
+- 0 x squash(cucurbita)
+- 1 x celery(apia)
+- 2 x carrot(apia)
+
+box(1,2):
+- 1 x parsley(apia)
+- 1 x cucumber-short(cucurbita)
+- 3 x bean bush(legumino)
+- 1 x cucumber-trellis(cucurbita)
+- 3 x carrot(apia)
+
+box(2,2):
+- 0 x squash(cucurbita)
+- 1 x celery(apia)
+- 1 x parsley(apia)
+- 1 x cucumber-short(cucurbita)
+- 3 x bean bush(legumino)
+- 3 x carrot(apia)
+
+plot-1 (60x60) has:
+- 12 x bean bush
+- 3 x cucumber-trellis
+- 0 x squash
+- 3 x celery
+- 3 x parsley
+- 10 x carrot
+- 3 x cucumber-short
+.
+
+Finished in 0.00313 seconds (files took 0.82406 seconds to load)
+1 example, 0 failures
+

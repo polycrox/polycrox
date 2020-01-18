@@ -1,0 +1,108 @@
+Run options: include {:locations=>{"./spec/plot_spec.rb"=>[169]}}
+PLOT===plot-1
+=> tomato(solana) (already 0)
+=> eggplant(solana) (already 0)
+box(1,1): fill 1 x eggplant(solana)
+=> pepper(solana) (already 0)
+box(1,1) doesnt have 10.0 units (8 units left)
+box(2,1): fill 1 x pepper(solana)
+=> potato(solana) (already 0)
+box(1,1): fill 1 x potato(solana)
+=> okra(malva) (already 0)
+box(1,1): fill 1 x okra(malva)
+=> chili(solana) (already 0)
+box(1,1) is full
+box(2,1): fill 1 x chili(solana)
+=> parsley(apia) (already 0)
+box(1,1) is full
+box(2,1) doesnt have 4.0 units (2 units left)
+box(1,2): fill 1 x parsley(apia)
+=> celery(apia) (already 0)
+box(1,1) is full
+box(2,1) doesnt have 4.0 units (2 units left)
+box(1,2): fill 1 x celery(apia)
+=> carrot(apia) (already 0)
+box(1,1) is full
+box(2,1): fill 2 x carrot(apia)
+=> tomato(solana) (already 0)
+=> eggplant(solana) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 1 x eggplant(solana)
+=> pepper(solana) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 1 x pepper(solana)
+=> potato(solana) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 1 x potato(solana)
+=> okra(malva) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 1 x okra(malva)
+=> chili(solana) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2) doesnt have 8.0 units (2 units left)
+No space for chili(solana) in plot
+=> parsley(apia) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2) doesnt have 4.0 units (2 units left)
+No space for parsley(apia) in plot
+=> celery(apia) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2) doesnt have 4.0 units (2 units left)
+No space for celery(apia) in plot
+=> carrot(apia) (already 2)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 2 x carrot(apia)
+plot-1 is full
+------
+pool: ["solana", "apia", "malva"]
+pool: tomato,eggplant,pepper,potato,okra,chili,parsley,celery,carrot
+box(1,1):
+- 1 x eggplant(solana)
+- 1 x potato(solana)
+- 1 x okra(malva)
+
+box(2,1):
+- 1 x pepper(solana)
+- 1 x chili(solana)
+- 2 x carrot(apia)
+
+box(1,2):
+- 1 x parsley(apia)
+- 1 x celery(apia)
+- 1 x eggplant(solana)
+
+box(2,2):
+- 1 x pepper(solana)
+- 1 x potato(solana)
+- 1 x okra(malva)
+- 2 x carrot(apia)
+
+plot-1 (60x60) has:
+- 2 x eggplant
+- 2 x potato
+- 2 x okra
+- 2 x pepper
+- 1 x chili
+- 4 x carrot
+- 1 x parsley
+- 1 x celery
+.
+
+Finished in 0.00286 seconds (files took 0.82033 seconds to load)
+1 example, 0 failures
+

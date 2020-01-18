@@ -1,0 +1,20 @@
+# WARNING: copy beds.txt
+nursery;cabbage
+nursery;cabbage
+nursery;cabbage
+nursery;cabbage
+nursery;cabbage
+nursery;cabbage
+north_fence;swiss chard;
+north;tomato;
+north;cabbage;
+north;cabbage;
+north;chili;
+north;chili;
+north;chili;
+pond;pepper;
+pond;pepper;
+pond;pepper;
+pond;pepper;
+pond;pepper;
+pond;pepper;

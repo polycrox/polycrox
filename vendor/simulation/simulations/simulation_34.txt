@@ -1,0 +1,142 @@
+Run options: include {:locations=>{"./spec/plot_spec.rb"=>[169]}}
+PLOT===plot-1
+=> bean bush(legumino) (already 0)
+box(1,1): fill 3 x bean bush(legumino)
+=> purple kale(brassica) (already 0)
+box(1,1): fill 1 x purple kale(brassica)
+=> kale(brassica) (already 0)
+box(1,1) doesnt have 12.0 units (5 units left)
+box(2,1): fill 1 x kale(brassica)
+=> cabbage(brassica) (already 0)
+box(1,1) doesnt have 12.0 units (5 units left)
+box(2,1) doesnt have 12.0 units (8 units left)
+box(1,2): fill 1 x cabbage(brassica)
+=> onion(allium) (already 0)
+box(1,1) has an enemy to onion(allium)
+box(2,1): fill 3 x onion(allium)
+=> spring onion(allium) (already 0)
+box(1,1): fill 3 x spring onion(allium)
+=> bean bush(legumino) (already 3)
+box(1,1): fill 2 x bean bush(legumino)
+=> purple kale(brassica) (already 1)
+box(1,1) is full
+box(2,1) doesnt have 12.0 units (5 units left)
+box(1,2) doesnt have 12.0 units (8 units left)
+box(2,2): fill 1 x purple kale(brassica)
+=> kale(brassica) (already 1)
+box(1,1) is full
+box(2,1) doesnt have 12.0 units (5 units left)
+box(1,2) doesnt have 12.0 units (8 units left)
+box(2,2) doesnt have 12.0 units (8 units left)
+No space for kale(brassica) in plot
+=> cabbage(brassica) (already 1)
+box(1,1) is full
+box(2,1) doesnt have 12.0 units (5 units left)
+box(1,2) doesnt have 12.0 units (8 units left)
+box(2,2) doesnt have 12.0 units (8 units left)
+No space for cabbage(brassica) in plot
+=> onion(allium) (already 3)
+box(1,1) is full
+box(2,1): fill 3 x onion(allium)
+=> spring onion(allium) (already 3)
+box(1,1) is full
+box(2,1): fill 2 x spring onion(allium)
+=> bean bush(legumino) (already 5)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x bean bush(legumino)
+=> purple kale(brassica) (already 2)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 12.0 units (5 units left)
+box(2,2) doesnt have 12.0 units (8 units left)
+No space for purple kale(brassica) in plot
+=> kale(brassica) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 12.0 units (5 units left)
+box(2,2) doesnt have 12.0 units (8 units left)
+No space for kale(brassica) in plot
+=> cabbage(brassica) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 12.0 units (5 units left)
+box(2,2) doesnt have 12.0 units (8 units left)
+No space for cabbage(brassica) in plot
+=> onion(allium) (already 6)
+box(1,1) is full
+box(2,1) is full
+box(1,2) has an enemy to onion(allium)
+box(2,2): fill 3 x onion(allium)
+=> spring onion(allium) (already 5)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x spring onion(allium)
+=> bean bush(legumino) (already 8)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 2 x bean bush(legumino)
+=> purple kale(brassica) (already 2)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2) doesnt have 12.0 units (5 units left)
+No space for purple kale(brassica) in plot
+=> kale(brassica) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2) doesnt have 12.0 units (5 units left)
+No space for kale(brassica) in plot
+=> cabbage(brassica) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2) doesnt have 12.0 units (5 units left)
+No space for cabbage(brassica) in plot
+=> onion(allium) (already 9)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 3 x onion(allium)
+=> spring onion(allium) (already 8)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 2 x spring onion(allium)
+plot-1 is full
+------
+pool: ["legumino", "allium", "brassica"]
+pool: bean bush,purple kale,kale,cabbage,onion,spring onion
+box(1,1):
+- 5 x bean bush(legumino)
+- 1 x purple kale(brassica)
+- 3 x spring onion(allium)
+
+box(2,1):
+- 1 x kale(brassica)
+- 6 x onion(allium)
+- 2 x spring onion(allium)
+
+box(1,2):
+- 1 x cabbage(brassica)
+- 5 x bean bush(legumino)
+- 3 x spring onion(allium)
+
+box(2,2):
+- 1 x purple kale(brassica)
+- 6 x onion(allium)
+- 2 x spring onion(allium)
+
+plot-1 (60x60) has:
+- 10 x bean bush
+- 2 x purple kale
+- 10 x spring onion
+- 1 x kale
+- 12 x onion
+- 1 x cabbage
+.
+
+Finished in 0.00331 seconds (files took 0.83412 seconds to load)
+1 example, 0 failures
+

@@ -1,0 +1,22 @@
+planting_day=16/09/2017
+crop_season=summer
+nursery;celery,kale,purple kale
+nursery;celery,tomato,basil,kale,leek,
+nursery;tomato,sweet pepper,swiss chard,purple kale,basil,purple lettuce
+nursery;basil,tomato,maize,swiss chard,
+nursery;sweet pepper,basil,chive,maize,swiss chard,purple kale,tomato,celery,
+nursery;swiss chard,basil,celery,tomato
+north_fence;cabbage,spring onion,tomato,purple cabbage,swiss chard,parsley,lettuce,beetroot,pumpkin,chive
+north;basil,chili pepper,tomato,beetroot,celery,maize,swiss chard,eggplant
+north;swiss chard,beetroot,celery,cabbage,purple kale,parsley
+north;swiss chard,spring onion,kale
+north;swiss chard,purple cabbage,beetroot,kale
+north;swiss chard,kale,spring onion,beetroot,kale
+north;spring onion,celery,purple cabbage,purple kale
+pond;chili pepper,beetroot,swiss chard,kale
+pond;tomato,parsley
+pond;eggplant,celery,parsley,chive,basil,sweet pepper
+pond;chive,celery,beetroot,tomato,basil,eggplant,swiss chard
+pond;eggplant,basil,swiss chard
+pond;basil,tomato
+compost;beetroot,cabbage,purple kale,spring onion,tomato,swiss chard,pumpkin,leek

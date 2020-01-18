@@ -1,0 +1,105 @@
+Run options: include {:locations=>{"./spec/plot_spec.rb"=>[169]}}
+PLOT===plot-1
+=> tomato(solana) (already 0)
+=> cucumber-trellis(cucurbita) (already 0)
+box(1,1): fill 1 x cucumber-trellis(cucurbita)
+=> eggplant(solana) (already 0)
+box(1,1): fill 1 x eggplant(solana)
+=> pepper(solana) (already 0)
+box(1,1) doesnt have 10.0 units (2 units left)
+box(2,1): fill 1 x pepper(solana)
+=> chili(solana) (already 0)
+box(1,1) doesnt have 8.0 units (2 units left)
+box(2,1): fill 1 x chili(solana)
+=> potato(solana) (already 0)
+box(1,1) doesnt have 4.0 units (2 units left)
+box(2,1) doesnt have 4.0 units (2 units left)
+box(1,2): fill 1 x potato(solana)
+=> cucumber-short(cucurbita) (already 0)
+box(1,1) doesnt have 4.0 units (2 units left)
+box(2,1) doesnt have 4.0 units (2 units left)
+box(1,2): fill 1 x cucumber-short(cucurbita)
+=> onion(allium) (already 0)
+box(1,1): fill 2 x onion(allium)
+=> squash(cucurbita) (already 0)
+box(1,1) is full
+box(2,1) doesnt have 4.0 units (2 units left)
+box(1,2): fill 0 x squash(cucurbita)
+=> spring onion(allium) (already 0)
+box(1,1) is full
+box(2,1): fill 2 x spring onion(allium)
+=> tomato(solana) (already 0)
+=> cucumber-trellis(cucurbita) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 1 x cucumber-trellis(cucurbita)
+=> eggplant(solana) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 12.0 units (5 units left)
+box(2,2): fill 1 x eggplant(solana)
+=> pepper(solana) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 10.0 units (5 units left)
+box(2,2) doesnt have 10.0 units (8 units left)
+No space for pepper(solana) in plot
+=> chili(solana) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 8.0 units (5 units left)
+box(2,2): fill 1 x chili(solana)
+=> potato(solana) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 1 x potato(solana)
+=> cucumber-short(cucurbita) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2) doesnt have 4.0 units (1 units left)
+box(2,2) is full
+No space for cucumber-short(cucurbita) in plot
+=> onion(allium) (already 2)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 1 x onion(allium)
+plot-1 is full
+------
+pool: ["allium", "cucurbita", "solana"]
+pool: squash,spring onion,tomato,cucumber-trellis,eggplant,pepper,chili,potato,cucumber-short,onion
+box(1,1):
+- 1 x cucumber-trellis(cucurbita)
+- 1 x eggplant(solana)
+- 2 x onion(allium)
+
+box(2,1):
+- 1 x pepper(solana)
+- 1 x chili(solana)
+- 2 x spring onion(allium)
+
+box(1,2):
+- 2 x potato(solana)
+- 1 x cucumber-short(cucurbita)
+- 0 x squash(cucurbita)
+- 1 x cucumber-trellis(cucurbita)
+- 1 x onion(allium)
+
+box(2,2):
+- 1 x eggplant(solana)
+- 1 x chili(solana)
+
+plot-1 (60x60) has:
+- 2 x cucumber-trellis
+- 2 x eggplant
+- 3 x onion
+- 1 x pepper
+- 2 x chili
+- 2 x spring onion
+- 2 x potato
+- 1 x cucumber-short
+- 0 x squash
+.
+
+Finished in 0.0033 seconds (files took 1.14 seconds to load)
+1 example, 0 failures
+

@@ -1,0 +1,28 @@
+#area;dimension;shape
+nursery;194x90;
+nursery;178x93;
+nursery;208x80;
+nursery;290x118;
+nursery;340x115;
+nursery;220x160;triangle;
+north_fence;630x60
+north_fence;630x60
+north_fence;630x60
+north;670x90;
+# 590x120?
+north;590x90;
+north;490x100;
+north;450x100;
+# make it 260x90
+north;260x70;
+# 170x190x240 triangle;
+north;170x190;triangle;
+# circle shape
+pond;140x130;
+pond;360x90;
+pond;610x90;
+pond;630x90;
+pond;340x90;
+#x110 - triangle shape
+pond;130x150;
+compost;100x100

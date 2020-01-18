@@ -1,0 +1,144 @@
+Run options: include {:locations=>{"./spec/plot_spec.rb"=>[169]}}
+PLOT===plot-1
+=> cucumber-trellis(cucurbita) (already 0)
+box(1,1): fill 1 x cucumber-trellis(cucurbita)
+=> cucumber-short(cucurbita) (already 0)
+box(1,1): fill 1 x cucumber-short(cucurbita)
+=> swiss chard(chenopo) (already 0)
+box(1,1): fill 1 x swiss chard(chenopo)
+=> squash(cucurbita) (already 0)
+box(1,1): fill 0 x squash(cucurbita)
+=> parsley(apia) (already 0)
+box(1,1): fill 1 x parsley(apia)
+=> celery(apia) (already 0)
+box(1,1) doesnt have 4.0 units (1 units left)
+box(2,1): fill 1 x celery(apia)
+=> carrot(apia) (already 0)
+box(1,1): fill 1 x carrot(apia)
+=> beetroot(chenopo) (already 0)
+box(1,1) is full
+box(2,1): fill 3 x beetroot(chenopo)
+=> spinach(chenopo) (already 0)
+box(1,1) is full
+box(2,1): fill 3 x spinach(chenopo)
+=> cucumber-trellis(cucurbita) (already 1)
+box(1,1) is full
+box(2,1): fill 1 x cucumber-trellis(cucurbita)
+=> cucumber-short(cucurbita) (already 1)
+box(1,1) is full
+box(2,1): fill 1 x cucumber-short(cucurbita)
+=> swiss chard(chenopo) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 1 x swiss chard(chenopo)
+=> squash(cucurbita) (already 0)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 0 x squash(cucurbita)
+=> parsley(apia) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 1 x parsley(apia)
+=> celery(apia) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 1 x celery(apia)
+=> carrot(apia) (already 1)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x carrot(apia)
+=> beetroot(chenopo) (already 3)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 3 x beetroot(chenopo)
+=> spinach(chenopo) (already 3)
+box(1,1) is full
+box(2,1) is full
+box(1,2): fill 1 x spinach(chenopo)
+=> cucumber-trellis(cucurbita) (already 2)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 1 x cucumber-trellis(cucurbita)
+=> cucumber-short(cucurbita) (already 2)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 1 x cucumber-short(cucurbita)
+=> swiss chard(chenopo) (already 2)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 1 x swiss chard(chenopo)
+=> squash(cucurbita) (already 0)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 0 x squash(cucurbita)
+=> parsley(apia) (already 2)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 1 x parsley(apia)
+=> celery(apia) (already 2)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2) doesnt have 4.0 units (1 units left)
+No space for celery(apia) in plot
+=> carrot(apia) (already 4)
+box(1,1) is full
+box(2,1) is full
+box(1,2) is full
+box(2,2): fill 1 x carrot(apia)
+plot-1 is full
+------
+pool: ["apia", "cucurbita", "chenopo"]
+pool: beetroot,spinach,cucumber-trellis,cucumber-short,swiss chard,squash,parsley,celery,carrot
+box(1,1):
+- 1 x cucumber-trellis(cucurbita)
+- 1 x cucumber-short(cucurbita)
+- 1 x swiss chard(chenopo)
+- 0 x squash(cucurbita)
+- 1 x parsley(apia)
+- 1 x carrot(apia)
+
+box(2,1):
+- 1 x celery(apia)
+- 3 x beetroot(chenopo)
+- 3 x spinach(chenopo)
+- 1 x cucumber-trellis(cucurbita)
+- 1 x cucumber-short(cucurbita)
+
+box(1,2):
+- 1 x swiss chard(chenopo)
+- 0 x squash(cucurbita)
+- 1 x parsley(apia)
+- 1 x celery(apia)
+- 3 x carrot(apia)
+- 3 x beetroot(chenopo)
+- 1 x spinach(chenopo)
+
+box(2,2):
+- 1 x cucumber-trellis(cucurbita)
+- 1 x cucumber-short(cucurbita)
+- 1 x swiss chard(chenopo)
+- 0 x squash(cucurbita)
+- 1 x parsley(apia)
+- 1 x carrot(apia)
+
+plot-1 (60x60) has:
+- 3 x cucumber-trellis
+- 3 x cucumber-short
+- 3 x swiss chard
+- 0 x squash
+- 3 x parsley
+- 5 x carrot
+- 2 x celery
+- 6 x beetroot
+- 4 x spinach
+.
+
+Finished in 0.00317 seconds (files took 0.84991 seconds to load)
+1 example, 0 failures
+

@@ -34,6 +34,10 @@ Rails.application.routes.draw do
   resources :form_properties
 
   resources :gardens do
+    member do 
+      get 'map'
+    end
+
     resource :nursery do
       resources :nursery_items
     end

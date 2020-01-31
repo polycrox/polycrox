@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180530145040) do
+ActiveRecord::Schema.define(version: 20200130162612) do
 
   create_table "boxes", force: :cascade do |t|
     t.integer "pos_x"
@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 20180530145040) do
     t.integer "item_id"
     t.string "state"
     t.boolean "present_in_plot", default: true
+    t.integer "box_id"
+    t.integer "spacing_id"
     t.index ["item_id"], name: "index_crops_on_item_id"
     t.index ["plot_id"], name: "index_crops_on_plot_id"
   end
@@ -97,15 +99,8 @@ ActiveRecord::Schema.define(version: 20180530145040) do
     t.index ["item_id"], name: "index_nursery_items_on_item_id"
   end
 
-  create_table "plots", force: :cascade do |t|
-    t.string "name"
-    t.integer "length_cm"
-    t.integer "width_cm"
-    t.integer "garden_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["garden_id"], name: "index_plots_on_garden_id"
-  end
+# Could not dump table "plots" because of following StandardError
+#   Unknown type 'json' for column 'geometry'
 
   create_table "properties", force: :cascade do |t|
     t.integer "item_id"

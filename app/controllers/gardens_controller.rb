@@ -10,7 +10,7 @@ class GardensController < ApplicationController
   # GET /gardens/1
   # GET /gardens/1.json
   def show
-    
+    @plots_json = ActiveSupport::JSON.encode(@garden.plots)    
   end
 
   # GET /gardens/new

@@ -77,6 +77,6 @@ class PlotsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def plot_params
-      params.require(:plot).permit(:name, :length_cm, :width_cm, :garden_id)
+      params.require(:plot).permit(:name, :geometry, :garden_id)
     end
 end

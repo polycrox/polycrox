@@ -19,6 +19,13 @@
 <%# end %>
 
 <hr />
+
+<pox-garden-map
+    :plots='<%= @plots_json %>'
+    :garden_id='<%= @garden.id %>'>
+    
+</pox-garden-map>
+
 <%#= link_to 'Edit', edit_garden_path(@garden) %> |
 <%#= link_to 'Back', gardens_path %>
 

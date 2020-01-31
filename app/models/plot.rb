@@ -53,7 +53,8 @@ class Plot < ApplicationRecord
       rows: rows, 
       cols: cols,
       length_cm: length_cm,
-      width_cm: width_cm
+      width_cm: width_cm,
+      geometry: geometry
     }.merge(options)
   end
 

@@ -1,6 +1,20 @@
 
 <template>
     <div>
+        hello: {{ count }} cool
+        <button 
+            v-on:click='incrementClick'>
+            +
+        </button>
+        <button 
+            v-on:click='decrementClick'>
+            +
+        </button>
+
+        <big-counter>
+            
+        </big-counter>
+
         TODO:
         <ul>
             <li style='text-decoration:line-through'>Fill a bed when borders are closed</li>
@@ -159,6 +173,8 @@
     </div>
 </template>
 <script>
+    import { mapState, mapMutations } from 'vuex'
+    
     function initShape() {
         return {
             path2d: new Path2D(),
@@ -197,6 +213,11 @@
                 defaultRatio: 100  // 100px = 1m
             }
         },
+        computed: {
+            ...mapState([
+                'count'
+            ]),
+        },
         mounted: function() {
             this.canvas = document.getElementById('tutorial')
             this.ctx = this.canvas.getContext('2d')
@@ -228,6 +249,12 @@
 
         },
         methods: {
+            incrementClick: function() {
+                this.$store.commit('increment')
+            },
+            decrementClick: function() {
+                this.$store.commit('decrement')
+            },
             clickCanvas: function(e) {
                 if (!this.currentShape) {
                     this.currentShape = initShape()

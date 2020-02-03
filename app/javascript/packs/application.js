@@ -11,21 +11,21 @@ import Vue from 'vue'
 import VueResource from 'vue-resource'
 import Vuex, { mapState } from 'vuex'
 
-import App from '../App'
-import PoxPlotsEditor from '../PoxPlotsEditor'
-import PoxSearch from '../PoxSearch'
-import PoxCropsEditor from '../PoxCropsEditor'
+import App from './components/App'
+import PoxPlotsEditor from './components/PoxPlotsEditor'
+import PoxSearch from './components/PoxSearch'
+import PoxCropsEditor from './components/PoxCropsEditor'
 
-import PoxSqfEditor from '../PoxSqfEditor'
-import PoxSqfSquareShape from '../PoxSqfSquareShape'
-import PoxSqfCornerShape from '../PoxSqfCornerShape'
+import PoxSqfEditor from './components/PoxSqfEditor'
+import PoxSqfSquareShape from './components/PoxSqfSquareShape'
+import PoxSqfCornerShape from './components/PoxSqfCornerShape'
 
-import PoxNurseryEditor from '../PoxNurseryEditor'
-import PoxNurseryItemForm from '../PoxNurseryItemForm'
+import PoxNurseryEditor from './components/PoxNurseryEditor'
+import PoxNurseryItemForm from './components/PoxNurseryItemForm'
 
-import PoxItemsGroups from '../PoxItemsGroups'
+import PoxItemsGroups from './components/PoxItemsGroups'
 
-import PoxGardenMap from '../PoxGardenMap'
+import PoxGardenMap from './components/PoxGardenMap'
 import store from './store'
 
 Vue.use(VueResource)

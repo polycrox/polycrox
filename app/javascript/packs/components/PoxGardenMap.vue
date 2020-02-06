@@ -1,33 +1,6 @@
 
 <template>
     <div>
-        hello: {{ count }} cool
-        <button 
-            v-on:click='incrementClick'>
-            +
-        </button>
-        <button 
-            v-on:click='decrementClick'>
-            +
-        </button>
-
-        <big-counter>
-            
-        </big-counter>
-
-        TODO:
-        <ul>
-            <li style='text-decoration:line-through'>Fill a bed when borders are closed</li>
-            <li style='text-decoration:line-through'>Save bed's position in the database</li>
-            <li style='text-decoration:line-through'>Re-draw a bed from its position saved in the database</li>
-            <li>Draw a polygon by clicking to create points and link them with lines.</li>
-            <li>Automatically calculate dimensions + <span style='text-decoration:line-through'>perimeter</span> + area</li>
-            <li>Save ratio (e.g: 100px = 1m, ...) in the geometry</li>
-            <li>Draw curves for more complex shapes</li>
-            <li>Toggle Square foot Grid in a bed</li>
-            <li>Drag and drop beds</li>
-            <li>Refactor `_drawPoint` and `_drawLine`</li>
-        </ul>
         <canvas
             id="tutorial" width="800" height="600"
             v-on:click='clickCanvas'
@@ -49,132 +22,15 @@
             <input 
                 type='submit'
                 v-on:click='saveCurrentShape' />
-
         </form>
-
-        <input type="text" v-model="line.length" placeholder="length" />
-        <button
-            v-on:click='drawLine'
-            v-if='isModeDrawing'>
-            Draw Line
-        </button>
-
-        <button
-            v-on:click='drawPolygon'>
-            Draw Polygon
-        </button>
 
         <button
             v-on:click='closePolygon'>
             close Polygon
         </button>
-
-        <button
-            v-on:click='toggleModeSelection'>
-            Mode Selection: {{ isModeSelection }}
-        </button>
-
-        <span
-            v-if='!isModeDrawing'>
-            Click anywhere on the map to start drawing
-        </span>
-
-        <button
-            v-on:click='stopDrawing'
-            v-if='isModeDrawing'>
-            Stop drawing
-        </button>
-
-        
-        <br />
-
-        <input type="text" v-model="line.angle" placeholder="angle" />
-        <!-- cursor goes to East -->
-        <button
-            v-on:click='drawCorner("north")'
-            v-if='cursor.direction == "east"'>
-            Go North
-        </button>
-
-        <button
-            v-on:click='drawCorner("south")'
-            v-if='cursor.direction == "east"'>
-            Go South
-        </button>
-
-        <!-- cursor goes to South -->
-        <button
-            v-on:click='drawCorner("east")'
-            v-if='cursor.direction == "south"'>
-            Go East
-        </button>
-
-        <button
-            v-on:click='drawCorner("west")'
-            v-if='cursor.direction == "south"'>
-            Go West
-        </button>
-
-        <!-- cursor goes to West -->
-        <button
-            v-on:click='drawCorner("north")'
-            v-if='cursor.direction == "west"'>
-            Go North
-        </button>
-
-        <button
-            v-on:click='drawCorner("south")'
-            v-if='cursor.direction == "west"'>
-            Go South
-        </button>
-
-        <!-- cursor goes to North -->
-        <button
-            v-on:click='drawCorner("east")'
-            v-if='cursor.direction == "north"'>
-            Go East
-        </button>
-
-        <button
-            v-on:click='drawCorner("west")'
-            v-if='cursor.direction == "north"'>
-            Go West
-        </button>
-
-        <button
-            v-on:click='clearCanvas'>
-            Clear canvas
-        </button>
-        <button
-            v-on:click='clearPosition'>
-            Clear position
-        </button>
-        <button
-            v-on:click='displayGardenGrid'>
-            Toggle Garden Grid
-        </button>
-
-        <button
-            v-on:click=''>
-            Toggle Square Foot Grid
-        </button>
-
-        <button
-            v-on:click='zoomIn'>
-            Zoom in
-        </button>
-
-        <button
-            v-on:click='zoomOut'>
-            Zoom out
-        </button>
-
-        
     </div>
 </template>
 <script>
-    import { mapState, mapMutations } from 'vuex'
-    
     function initShape() {
         return {
             path2d: new Path2D(),
@@ -195,16 +51,8 @@
                     direction: 'east'
                 },
                 margin: 20,
-                line: {
-                    angle: 0,
-                    length: 50
-                },
-                isModeDrawing: false,
-                isModeSelection: false,
+                drawPolygon: true,
                 isModeFormEditing: false,
-                isDrawingSquareBox: false,
-                startLine: null,
-                stopLine: null,
                 canvas: null,
                 ctx: null,
                 showGardenGrid: false,
@@ -212,11 +60,6 @@
                 shapes: [],
                 defaultRatio: 100  // 100px = 1m
             }
-        },
-        computed: {
-            ...mapState([
-                'count'
-            ]),
         },
         mounted: function() {
             this.canvas = document.getElementById('tutorial')
@@ -249,12 +92,6 @@
 
         },
         methods: {
-            incrementClick: function() {
-                this.$store.commit('increment')
-            },
-            decrementClick: function() {
-                this.$store.commit('decrement')
-            },
             clickCanvas: function(e) {
                 if (!this.currentShape) {
                     this.currentShape = initShape()
@@ -263,60 +100,21 @@
                 this.moveCursor(e)
                 this.savePointOfCurrentShape();
 
-                console.log(this.currentShape.points)
-
-                if (!this.isModeDrawing) {
-
-                    this.isModeDrawing = true
-                    this.cursor = {
-                        position: {
-                            x: e.layerX,
-                            y: e.layerY
-                        },
-                        direction: 'east'
-                    }
-
-                    this.currentShape = initShape()
-                    this.currentShape.path2d.moveTo(this.cursor.position.x, this.cursor.position.y);
-                    this.savePointOfCurrentShape();
-
-                } else if (this.drawPolygon) {
-                    
-
-                    
-                    // this.draw(_shape, drawCircle)
-
-
+                if (this.drawPolygon) {
                     this.currentShape.path2d.moveTo(this.cursor.position.x, this.cursor.position.y);
 
                     this.drawCircle(this.cursor.position.x, this.cursor.position.y)
 
-                    // this.currentShape.points.forEach((point) => {
-                    //     if (this.ctx.isPointInPath(this.currentShape.path2d, e.offsetX, e.offsetY)) {
-                    //         console.log(point)
-                    //     }
-                    // })
-
-                    
-
-                    
-
-
                 } else {
-                    alert('already in drawing mode.')
+                    alert('save new polygon first.')
                 }
             },
             closePolygon: function() {
-                // let _polygonPoints = Object.assign({}, )
                 let _polygonShape = this._drawPoints(initShape(), this.currentShape.points)
                 this.drawPolygon = false
 
                 this.exportCurrentShapePointsToJSON()
-
-
                 this.isModeFormEditing = true
-
-                // this.currentShape = null
             },
             moveCursor: function(e) {
                 this.cursor.position.x = e.layerX                        
@@ -333,24 +131,6 @@
                 this.currentShape.path2d.addPath(_circle)
 
             },
-            stopDrawing: function() {
-                this.currentShape.path2d.closePath()
-                
-                this.ctx.fillStyle = 'black';
-                this.ctx.fill(this.currentShape.path2d);
-
-                this.ctx.strokeStyle = 'red';
-                this.ctx.stroke(this.currentShape.path2d);
-
-                this.shapes.push(this.currentShape)
-
-                this.isModeDrawing = false
-
-                this.exportCurrentShapePointsToJSON()
-
-
-                this.isModeFormEditing = true
-            },
             toggleModeSelection: function() {
                 this.isModeSelection = !this.isModeSelection
             },
@@ -365,28 +145,6 @@
                     })
                 }                
             },
-            zoomIn: function() {
-                this.clearCanvas()
-                this.ctx.scale(0.5, 0.5)
-              
-            },
-            zoomOut: function() {
-                this.clearCanvas()
-                this.ctx.scale(2, 2)
-            },
-            clearCanvas: function() {
-                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-                this.showGardenGrid = false
-            },
-            clearPosition: function() {
-                this.cursor = {
-                    position: {
-                        x: this.map.origin.x,
-                        y: this.map.origin.y
-                    },
-                    direction: 'east'
-                }
-            },
             _drawLine: function(source, position, style) {
                 this.ctx.lineWidth = style.lineWidth;
                 this.ctx.strokeStyle = style.strokeStyle;
@@ -394,76 +152,15 @@
                     this.ctx.setLineDash([])    
                 }
                 
-                
                 // that was my bug!!!
+
+                // do not use `moveTo` on a Path2D object.
+                
                 // this.currentShape.moveTo(this.cursor.position.x, this.cursor.position.y);
 
                 source.lineTo(position.x, position.y);
                 this.ctx.stroke(source)
                 
-            },
-            drawLine: function() {
-                this.savePointOfCurrentShape()
-
-                let length = parseInt(this.line.length)
-
-                if (this.cursor.direction == 'east') {
-                    let _pos = this.cursor.position
-
-                    this._drawLine(this.currentShape.path2d, _pos.x + length, _pos.y, {
-                        lineWidth: '2px',
-                        strokeStyle: 'orange',
-                        line: 'straight'
-                    })    
-
-                } else if (this.cursor.direction == 'west') {
-                    this._drawLine(-length, 0)
-
-                } else if (this.cursor.direction == 'north') {
-                    this._drawLine(0, -length)
-
-                } else if (this.cursor.direction == 'south') {
-                    this._drawLine(0, length)
-                }
-                
-            },
-            drawCorner: function(direction) {
-                if (this.cursor.direction == 'east') {
-                    if (direction == 'north') {
-                        this._drawLine(5, 0)
-                        this._drawLine(0, -5)
-                    } else if (direction == 'south') {
-                        this._drawLine(5, 0)
-                        this._drawLine(0, 5)
-                    }
-                    
-                } else if (this.cursor.direction == 'west') {
-                    if (direction == 'north') {
-                        this._drawLine(-5, 0)
-                        this._drawLine(0, -5)
-                    } else if (direction == 'south') {
-                        this._drawLine(-5, 0)
-                        this._drawLine(0, 5)
-                    }
-                } else if (this.cursor.direction == 'north') {
-                    if (direction == 'east') {
-                        this._drawLine(0, -5)
-                        this._drawLine(5, 0)
-                    } else if (direction == 'west') {
-                        this._drawLine(0, -5)
-                        this._drawLine(-5, 0)
-                    }
-                } else if (this.cursor.direction == 'south') {
-                    if (direction == 'east') {
-                        this._drawLine(0, 5)
-                        this._drawLine(5, 0)
-                    } else if (direction == 'west') {
-                        this._drawLine(0, 5)
-                        this._drawLine(-5, 0)
-                    }
-                }
-
-                this.cursor.direction = direction       
             },
             displayGardenGrid: function() {
                 // 100 px = 1 m
@@ -615,7 +312,9 @@
                         'X-CSRF-Token': csrfToken
                     }
                 }).then(response => {
-                   console.log(response)
+                   this.isModeFormEditing = false
+                   this.drawPolygon = true
+                   this.currentShape = null
                 }, response =>{
                     console.log('fail createItem')
                 })
@@ -629,12 +328,8 @@
                         _shape.points = _geom
                         _shape.name = plot.name
 
-
-
-
                         let _plotShape = this._drawPoints(_shape, _geom)
                         this.shapes.push(_plotShape)
-
                     }
                 })
             },
@@ -674,12 +369,6 @@
             calcDistanceBetweenPoints: function(p1, p2) {
                 return Math.sqrt(Math.pow(p2.x - p1.x, 2) + Math.pow(p2.y - p2.y, 2))
             },
-            drawPolygon: function() {
-                this.PolygonMode = true
-
-
-
-            }
         }
     }
 

@@ -63,10 +63,6 @@
 </template>
 
 <script>
-import Vue from 'vue'
-import PoxSqfSquareShape from './PoxSqfSquareShape'
-import PoxSqfCornerShape from './PoxSqfCornerShape'
-import PoxSqfLineShape from './PoxSqfLineShape'
 
 export default {
   props: ['item'],
@@ -207,7 +203,7 @@ export default {
 
 </script>
 
-<style lang="scss">
+<style lang="css">
 
 .plot-150-boxes {
   .box {

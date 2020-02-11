@@ -322,7 +322,7 @@
             drawPlots: function(plots) {
                 plots.forEach((plot) => {
                     if (plot.geometry) {
-                        let _geom = JSON.parse(plot.geometry)
+                        let _geom = plot.geometry
                         let _shape = initShape()
                         
                         _shape.points = _geom

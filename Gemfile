@@ -1,4 +1,4 @@
-ruby '2.6.0'
+ruby '2.6.5'
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
@@ -8,14 +8,14 @@ end
 
 
 
-gem 'rails', '~> 5.1.4'
+gem 'rails', '5.2.4'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
-gem 'webpacker', '3.5.3'
+gem 'webpacker', '~> 4.2.2'
 gem 'foreman', '0.84.0'
 gem 'bootstrap', '~> 4.1.1'
 gem 'rspec', '3.7.0'

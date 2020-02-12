@@ -183,14 +183,9 @@
                 }
                 this._displayGardenGridXScale(halfMetersScale, false)
                 this._displayGardenGridXScale(metersScale, true)
-                
-
 
                 this._displayGardenGridYScale(metersScale, true)
                 this._displayGardenGridYScale(halfMetersScale, false)
-                
-
-                console.log(this.canvas.width)
             },
             _drawBorders: function() {
                 this.ctx.lineWidth = 1;

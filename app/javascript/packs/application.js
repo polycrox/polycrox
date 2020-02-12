@@ -9,7 +9,7 @@
 import 'core-js/stable'
 import 'regenerator-runtime/runtime'
 
-import Vue from 'vue'
+import Vue from 'vue/dist/vue.esm.js'
 import VueResource from 'vue-resource'
 import Vuex, { mapState } from 'vuex'
 

@@ -7,7 +7,6 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     
-    <%= stylesheet_pack_tag 'application' %>
     <%= javascript_pack_tag "application" %>
   </head>
 
@@ -26,15 +25,10 @@
       </div>
     </nav>
     <div class="container">
-      
-    
-        
-          <% if  @layout_garden_template %>  
-            <%= render template: 'layouts/garden_plots' %>
-          <% end %>
-          <%= yield %>
-        
-    
+      <% if  @layout_garden_template %>  
+        <%= render template: 'layouts/garden_plots' %>
+      <% end %>
+      <%= yield %>    
     </div>
   </body>
 </html>

@@ -27,6 +27,7 @@ class PlotsController < ApplicationController
   # POST /plots.json
   def create
     @plot = Plot.new(plot_params)
+    @plot.geometry = JSON.parse(plot_params[:geometry])
 
     respond_to do |format|
       if @plot.save

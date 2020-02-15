@@ -57,4 +57,6 @@ config.webpacker.check_yarn_integrity = true
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   config.active_record.sqlite3.represent_boolean_as_integer = true
+
+   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end

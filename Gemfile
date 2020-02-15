@@ -22,6 +22,7 @@ gem 'rspec', '3.7.0'
 gem 'rspec-rails', '3.7.2'
 gem 'pry', '0.11.3'
 gem 'rails_admin', '~> 1.3'
+gem 'devise'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

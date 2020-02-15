@@ -22,9 +22,24 @@
             <%= link_to 'Library', library_path %>
           </li>
         </ul>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <% if user_signed_in? %>
+              <%= current_user.email %>
+              <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+            <% else %>
+              <%= link_to 'Sign in', new_user_session_path %>
+              <%= link_to 'Sign up', new_user_registration_path %>
+            <% end %>
+          </li>
+        </ul>
       </div>
     </nav>
     <div class="container">
+
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+
       <% if  @layout_garden_template %>  
         <%= render template: 'layouts/garden_plots' %>
       <% end %>

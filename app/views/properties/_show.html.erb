@@ -1,16 +1,60 @@
 <% prop = item.hash_properties_objects[fp.name.to_sym] %>
 
-<div id="form_property_<%= fp.id %>" class="item-property col-sm">
+<div 
+  id="form_property_<%= fp.id %>"
+  class="item-property col-sm"
+  data-form-property-id='<%= fp.id %>'>
+
   <div class="card">
-    <div class="card-header"><%= fp.name %></div>
+    <div class="card-header">
+      <div class='row'>
+        <div class='col-sm-10'>
+          <h4 class='edit-form-property-off form-property-name-off'>
+            <%= fp.name %>
+          </h4>
+
+          <input 
+            type='text' 
+            class='form-control edit-form-property-on form-property-name-on' 
+            value='<%= fp.name %>' />
+        </div>
+        <div class='col-sm-2'>
+          <button 
+            class='float-right edit-form-property edit-form-property-off btn btn-primary'
+            data-form-property-id='<%= fp.id %>'>
+              Edit
+          </button>
+        </div>
+      </div>
+    </div>
     <div class="card-body">
     
       <div class="row">
         <div class="col-sm">
-          <p><%= fp.description %></p>
+          <p class='edit-form-property-off form-property-description-off'>
+            <%= fp.description %>
+          </p>
+          <textarea
+            class='form-control edit-form-property-on form-property-description-on'><%= fp.description %></textarea>
         </div>
       </div>
       <hr />
+      <div class='row'>
+        <div class='col-sm-2'>
+          <button 
+            class='update-form-property edit-form-property-on btn btn-success'>
+              Update
+          </button>
+        </div>
+        <div class='col-sm-2'>
+          <button 
+            class='cancel-form-property edit-form-property-on btn btn-danger'>
+              Cancel
+          </button>
+        </div>
+      </div>
+      <hr class='edit-form-property-on' />
+
       <div class="row">
         <div class="col-sm" id="item_<%= item.id %>_form_prop_<%= fp.id %>_value">
           <%= render 'properties/value', item: item, prop: prop %>

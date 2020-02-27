@@ -33,6 +33,7 @@ Rails.application.routes.draw do
   delete 'items/:item_id/properties/:id', to: 'properties#destroy', as: :delete_item_properties
   
   resources :form_properties
+  put 'form_properties/:form_property_id/ajax', to: 'form_properties#update_ajax'
 
   resources :gardens do
     member do 

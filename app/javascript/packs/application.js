@@ -28,6 +28,7 @@ import PoxNurseryItemForm from './components/PoxNurseryItemForm'
 import PoxItemsGroups from './components/PoxItemsGroups'
 
 import PoxGardenMap from './components/PoxGardenMap'
+import PoxPropsEditor from './components/PoxPropsEditor'
 import store from './store'
 
 Vue.use(VueResource)
@@ -42,6 +43,8 @@ Vue.component('pox-sqf-corner-shape', PoxSqfCornerShape)
 Vue.component('pox-nursery-item-form', PoxNurseryItemForm)
 Vue.component('pox-items-groups', PoxItemsGroups)
 Vue.component('pox-nursery-editor', PoxNurseryEditor)
+Vue.component('pox-props-editor', PoxPropsEditor)
+
 Vue.component('big-counter', {
   template: `<h1>{{ count }}</h1>`,
   computed: {

@@ -1,4 +1,10 @@
-# README
+# Polycrox
+
+A web and mobile app designed as an online library tool and crop rotation simulator.
+Geared towards areas under 1 ha for community, subsistence, medicinal & herbal (indigenous), and small-scale market growers.
+Framed around research from regenerative soil science, agroforestry, and Square Foot Gardening.
+
+---
 
 ## Installation
 
@@ -53,4 +59,4 @@ test:
 
 
 
-	
+

@@ -203,7 +203,7 @@ export default {
 
 </script>
 
-<style lang="css">
+<style lang="scss">
 
 .plot-150-boxes {
   .box {
